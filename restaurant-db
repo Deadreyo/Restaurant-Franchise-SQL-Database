@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-21T00:14:54.347Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="4E1FSRsscMOKPARoAIjl" version="24.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-21T00:50:09.548Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="sEgpCjYOI_KQ9Fgwxsqm" version="24.2.7" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="1647" dy="2050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -148,7 +148,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5bKgy2BHQ5b4ZRSryHXF-30" value="Ingredients" style="whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=17;fillColor=#cce5ff;strokeColor=#36393d;" parent="1" vertex="1">
+        <mxCell id="5bKgy2BHQ5b4ZRSryHXF-30" value="Ingredient" style="whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=17;fillColor=#cce5ff;strokeColor=#36393d;" parent="1" vertex="1">
           <mxGeometry x="1205" y="100" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="5bKgy2BHQ5b4ZRSryHXF-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="5bKgy2BHQ5b4ZRSryHXF-36" target="5bKgy2BHQ5b4ZRSryHXF-52" edge="1">
@@ -187,7 +187,7 @@
             <mxPoint x="1844.9999999999995" y="140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5bKgy2BHQ5b4ZRSryHXF-36" value="Suppliers" style="whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=18;fillColor=#cce5ff;strokeColor=#36393d;" parent="1" vertex="1">
+        <mxCell id="5bKgy2BHQ5b4ZRSryHXF-36" value="Supplier" style="whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=18;fillColor=#cce5ff;strokeColor=#36393d;" parent="1" vertex="1">
           <mxGeometry x="1625" y="95" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="5bKgy2BHQ5b4ZRSryHXF-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="5bKgy2BHQ5b4ZRSryHXF-44" target="5bKgy2BHQ5b4ZRSryHXF-47" edge="1">
