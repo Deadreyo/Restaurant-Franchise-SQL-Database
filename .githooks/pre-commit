@@ -1,0 +1,4 @@
+#!/bin/sh
+
+node scripts/accumulateFiles.js
+git add out

@@ -1,0 +1,12 @@
+{
+  "name": "drawio-restaurant-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node scripts/accumulateFiles"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
