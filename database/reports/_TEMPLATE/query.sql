@@ -1,0 +1,3 @@
+-- Write the actual logic of the query here
+
+SELECT / CREATE VIEW ...
