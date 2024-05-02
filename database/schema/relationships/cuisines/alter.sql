@@ -1,4 +1,4 @@
-ALTER TABLE delivery_feedbacks_received
+ALTER TABLE cuisines
 	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES employee(employee_ssn)
     ON UPDATE CASCADE
     ON DELETE CASCADE

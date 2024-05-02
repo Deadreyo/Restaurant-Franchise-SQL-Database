@@ -1,13 +1,12 @@
-
 INSERT INTO employee (`first_name`,`last_name`,`employee_ssn`,`date_of_birth`,`age`,`salary`,`hiring_date`,`experience_years`,`role`,`branch_name`)
 VALUES
+  ("ahmed","gamal","268823444","1971-02-03",53,"7000","2022-05-20",18,"chef","sahel"),
+  ("atwa","omar","909557231","1994-02-23",30,"7000","2021-02-24",29,"chef","first settlement"),
   ("gamal","ahmed","058026787","1994-03-09",30,"7000","2021-05-28",21,"delivery_guy","abbasseya"),
-  ("ahmed","gamal","268823444","1971-02-03",53,"20000","2022-05-20",18,"manager","sahel"),
   ("ibrahim","mohamed","833681284","1989-08-08",35,"7000","2021-03-26",27,"chef","fifth settlement"),
   ("atwa","mohsen","679658701","1989-06-02",35,"7000","2021-07-05",12,"chef","fifth settlement"),
   ("walid","abdallah","149859020","1970-01-02",54,"6000","2021-03-21",13,"cashier","city stars"),
   ("mohamed","gamal","596880713","1985-04-27",39,"5000","2021-05-01",8,"delivery_guy","abdo basha"),
-  ("atwa","omar","909557231","1994-02-23",30,"15000","2021-02-24",29,"manager","first settlement"),
   ("gamal","nour","771535616","1975-09-13",49,"10000","2024-08-21",10,"manager","abdo basha"),
   ("ibrahim","mohsen","954221751","1996-03-08",28,"5000","2022-02-16",2,"cashier","abbasseya"),
   ("ali","mohsen","586711748","1992-04-03",32,"20000","2022-11-18",26,"manager","nasr city");
