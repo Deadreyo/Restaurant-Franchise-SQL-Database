@@ -1,0 +1,4 @@
+-- manager
+
+CREATE DOMAIN ... AS ...;
+
