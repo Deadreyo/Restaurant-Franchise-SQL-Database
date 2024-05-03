@@ -662,6 +662,11 @@ VALUES(
     "0"
 );
 
+-- Tool
+
+INSERT INTO ...
+;
+
 -- Transaction
 
 INSERT INTO `Transaction` (`order_id`,`payment_method`,`date_and_time`,`feedback`)

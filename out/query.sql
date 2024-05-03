@@ -59,6 +59,18 @@ SELECT
 FROM
     `Orders`;
 
+-- Tool
+
+SELECT ...
+;
+
+-- Transaction
+
+SELECT employee_ssn, COUNT(*) as num_of_bad_transactions
+FROM Transactions
+WHERE feedback < 3
+GROUP BY employee_ssn;
+
 -- Stores
 
 SELECT branch_name, ingredient_name From stores WHERE available_quantity < 20;
