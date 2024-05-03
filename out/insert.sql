@@ -245,6 +245,32 @@ VALUES
   ("hajar","nour","743032113","2002-04-05",22,"7000","2021-08-13",30,"chef","heliopolis");
 
 
+-- ingredient
+
+INSERT INTO Ingredient (ingredient_name) 
+VALUES 
+    ('Tomato'),
+    ('Lettuce'),
+    ('Onion'),
+    ('Cucumber'),
+    ('Carrot'),
+    ('Spinach'),
+    ('Bell Pepper'),
+    ('Mushroom'),
+    ('Broccoli'),
+    ('Cauliflower'),
+    ('Potato'),
+    ('Sweet Potato'),
+    ('Zucchini'),
+    ('Eggplant'),
+    ('Green Beans'),
+    ('Celery'),
+    ('Kale'),
+    ('Radish'),
+    ('Arugula'),
+    ('Cabbage');
+
+
 -- manager
 
 INSERT INTO manager(`employee_ssn`,`sector`,`branch_name`)
@@ -665,40 +691,54 @@ VALUES(
 -- Shipment
 
 
-INSERT INTO shipment (shipment_id, status, number_of_items, total_price,supplier_name,branch_name)
-VALUES (1,True, 20, 100, "Valeo", "number 1");
+INSERT INTO shipment (shipment_id, status, supplier_name, branch_name) 
+VALUES 
+    (1, TRUE, 'Fresh Farms', 'Farmington'),
+    (2, FALSE, 'Organic Harvest', 'Springfield'),
+    (3, TRUE, 'Sunshine Groceries', 'Sunnyvale'),
+    (4, TRUE, 'Green Grocers', 'Garden City'),
+    (5, FALSE, 'Nature's Best', 'Bloomfield'),
+    (6, TRUE, 'Farm Fresh', 'Fertile Fields'),
+    (7, TRUE, 'Eco-Friendly Foods', 'Evergreen'),
+    (8, FALSE, 'Healthy Harvest', 'Hillside'),
+    (9, TRUE, 'Local Produce Co.', 'Lakeside'),
+    (10, TRUE, 'Global Foods Inc.', 'Globeville'),
+    (11, FALSE, 'Sustainable Supply', 'Sustained Springs'),
+    (12, TRUE, 'Sunrise Farms', 'Dawn Valley'),
+    (13, TRUE, 'Prime Provisions', 'Pristine Peak'),
+    (14, FALSE, 'Earth's Bounty', 'Eco Valley'),
+    (15, TRUE, 'Harmony Grocers', 'Haven Heights'),
+    (16, TRUE, 'Wholesome Goods', 'Waterside'),
+    (17, FALSE, 'Purity Produce', 'Pure Plains'),
+    (18, TRUE, 'Green Thumb Produce', 'Growth Grove'),
+    (19, TRUE, 'Natural Nourishment', 'Nature's Nest'),
+    (20, FALSE, 'Purely Organic', 'Organic Oasis');
 
-INSERT INTO shipment (shipment_id, status, number_of_items, total_price,supplier_name,branch_name)
-VALUES (2,False, 30, 100, "IBM", "number 2");
-
-INSERT INTO shipment (shipment_id, status, number_of_items, total_price,supplier_name,branch_name)
-VALUES (3,True, 50, 50, "google", "number 3");
-
-INSERT INTO shipment (shipment_id, status, number_of_items, total_price,supplier_name,branch_name)
-VALUES (4,True, 10, 200, "seimens", "number 4");
 
 -- Supplier
 
-INSERT INTO supplier 
-VALUES ("Valeo", "nasr city", TRUE);
-
-INSERT INTO supplier 
-VALUES ("Valeo", "Nasr City", TRUE);
-
-INSERT INTO supplier 
-VALUES ("XYZ Company", "123 Main Street", TRUE);
-
-INSERT INTO supplier 
-VALUES ("ABC Corporation", "456 Elm Street", FALSE);
-
-INSERT INTO supplier 
-VALUES ("Smith Enterprises", "789 Oak Avenue", TRUE);
-
-INSERT INTO supplier 
-VALUES ("Global Parts Inc.", "10 Pine Street", FALSE);
-
-INSERT INTO supplier 
-VALUES ("Tech Solutions Ltd.", "555 Broadway", TRUE);
+INSERT INTO Supplier (supplier_name, location, telephone) 
+VALUES 
+    ('Fresh Farms', 'Farmington', '12345678901'),
+    ('Organic Harvest', 'Springfield', '23456789012'),
+    ('Sunshine Groceries', 'Sunnyvale', '34567890123'),
+    ('Green Grocers', 'Greenfield', '45678901234'),
+    ('Nature's Best', 'Bloomfield', '56789012345'),
+    ('Farm Fresh', 'Fertile Fields', '67890123456'),
+    ('Eco-Friendly Foods', 'Eco Valley', '78901234567'),
+    ('Healthy Harvest', 'Hillside', '89012345678'),
+    ('Local Produce Co.', 'Lakeside', '90123456789'),
+    ('Global Foods Inc.', 'Globeville', '01234567890'),
+    ('Sustainable Supply', 'Sustained Springs', '12345678901'),
+    ('Sunrise Farms', 'Dawn Valley', '23456789012'),
+    ('Prime Provisions', 'Pristine Peak', '34567890123'),
+    ('Earth's Bounty', 'Eco Valley', '45678901234'),
+    ('Harmony Grocers', 'Haven Heights', '56789012345'),
+    ('Wholesome Goods', 'Waterside', '67890123456'),
+    ('Purity Produce', 'Pure Plains', '78901234567'),
+    ('Green Thumb Produce', 'Growth Grove', '89012345678'),
+    ('Natural Nourishment', 'Nature's Nest', '90123456789'),
+    ('Purely Organic', 'Organic Oasis', '01234567890');
 
 
 -- Tool
@@ -915,26 +955,31 @@ INSERT INTO Made_with (tool_name, menu_item_id) VALUES
     ('Cutting board', 28);
 
 
--- Makes
-
-INSERT INTO ...
-;
-
 -- Sells
 
-INSERT INTO sells
-VALUES ("tomato", "Valeo", 100, 200);
-
-INSERT INTO sells
-VALUES ("banana", "IBM", 1000, 20000);
-
-INSERT INTO sells
-VALUES ("milk", "google", 35, 50000);
-
-INSERT INTO sells
-VALUES ("meat", "seimens", 400, 100000);
-
-
+-- Sample data for the Sells table
+INSERT INTO Sells (ingredient_name, supplier_name, price) 
+VALUES 
+    ('Tomato', 'Fresh Farms', 1.50),
+    ('Lettuce', 'Fresh Farms', 1.20),
+    ('Onion', 'Organic Harvest', 0.80),
+    ('Cucumber', 'Sunshine Groceries', 0.90),
+    ('Carrot', 'Organic Harvest', 1.10),
+    ('Spinach', 'Fresh Farms', 2.00),
+    ('Bell Pepper', 'Sunshine Groceries', 1.80),
+    ('Mushroom', 'Organic Harvest', 2.50),
+    ('Broccoli', 'Fresh Farms', 2.20),
+    ('Cauliflower', 'Sunshine Groceries', 1.75),
+    ('Potato', 'Fresh Farms', 1.00),
+    ('Sweet Potato', 'Organic Harvest', 1.30),
+    ('Zucchini', 'Sunshine Groceries', 1.60),
+    ('Eggplant', 'Fresh Farms', 1.80),
+    ('Green Beans', 'Organic Harvest', 2.00),
+    ('Celery', 'Sunshine Groceries', 1.20),
+    ('Kale', 'Fresh Farms', 2.50),
+    ('Radish', 'Organic Harvest', 1.00),
+    ('Arugula', 'Sunshine Groceries', 2.20),
+    ('Cabbage', 'Fresh Farms', 1.75);
 
 
 -- Stores
@@ -965,27 +1010,27 @@ VALUES
 
 -- Supplied_in
 
-INSERT INTO supplied_in 
-VALUES (tomato, 1, 5, 20);
+INSERT INTO Supplied_in (ingredient_name, shipment_id, quantity) 
+VALUES 
+    ('Tomato', 1, 100),
+    ('Lettuce', 2, 150),
+    ('Onion', 3, 120),
+    ('Cucumber', 4, 80),
+    ('Carrot', 5, 200),
+    ('Spinach', 6, 90),
+    ('Bell Pepper', 7, 110),
+    ('Mushroom', 8, 70),
+    ('Broccoli', 9, 100),
+    ('Cauliflower', 10, 120),
+    ('Potato', 11, 150),
+    ('Sweet Potato', 12, 80),
+    ('Zucchini', 13, 100),
+    ('Eggplant', 14, 130),
+    ('Green Beans', 15, 70),
+    ('Celery', 16, 110),
+    ('Kale', 17, 90),
+    ('Radish', 18, 120),
+    ('Arugula', 19, 100),
+    ('Cabbage', 20, 80);
 
-INSERT INTO supplied_in 
-VALUES (banana, 1, 10, 200);
-
-INSERT INTO supplied_in 
-VALUES (milk, 1, 15, 100);
-
-INSERT INTO supplied_in 
-VALUES (meat, 1, 300, 100);
-
-INSERT INTO supplied_in 
-VALUES (tomato, 2, 5, 50);
-
-INSERT INTO supplied_in 
-VALUES (banana, 2, 10, 100);
-
-INSERT INTO supplied_in 
-VALUES (milk, 2, 15, 200);
-
-INSERT INTO supplied_in 
-VALUES (meat, 2, 300, 200);
 
