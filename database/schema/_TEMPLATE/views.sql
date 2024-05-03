@@ -1,2 +1,3 @@
 CREATE VIEW ... AS
 SELECT ...
+;

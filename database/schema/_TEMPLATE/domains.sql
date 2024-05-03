@@ -1,1 +1,0 @@
-CREATE DOMAIN ... AS ...;
