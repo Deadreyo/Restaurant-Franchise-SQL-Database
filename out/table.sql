@@ -89,10 +89,11 @@ CREATE TABLE manager (
 CREATE TABLE Menu_item(
     menu_item_id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(30) NOT NULL,
-    category VARCHAR(20) NOT NULL,
-    size ENUM('Small', 'Medium', 'Large'),
+    category ENUM('main dish', 'appetizer', 'salads', 'hot drinks', 'cold drinks', 'desserts') NOT NULL,
+    size ENUM('small', 'medium', 'large') NOT NULL,
     price FLOAT NOT NULL,
-    PRIMARY KEY(menu_item_id)
+    PRIMARY KEY(menu_item_id),
+    UNIQUE (name, size)
 );
 
 -- Offer
