@@ -46,6 +46,14 @@ CREATE VIEW Transaction_view AS
     FROM Transaction, Orders, Customer
     WHERE Transaction.order_id = Orders.order_id AND Orders.customer_phone = Customer.customer_phone;
 
+-- Has
+
+CREATE VIEW Orders_has_items AS
+SELECT order_id, name, size, price, quantity, price * quantity as total_price
+FROM Has, Menu_item
+WHERE Has.menu_item_id = Menu_item.menu_item_id
+;
+
 -- Stores
 
 CREATE VIEW BranchesWithIngredients AS

@@ -75,6 +75,13 @@ CREATE TABLE employee(
     PRIMARY KEY(employee_ssn)
 );
 
+-- ingredient
+
+CREATE TABLE Ingredient(
+    ingredient_name VARCHAR(20),
+    PRIMARY KEY(ingredient_name)
+);
+
 -- manager
 
 CREATE TABLE manager (
@@ -134,6 +141,26 @@ CREATE TABLE Orders(
     PRIMARY KEY(order_id)
 );
 
+-- Shipment
+
+CREATE TABLE Shipment(
+    shipment_id INT,
+    date_and_time DATE DEFAULT CURRENT_DATE,
+    STATUS VARCHAR(10) NOT NULL,
+    supplier_name VARCHAR(10),
+    PRIMARY KEY(shipment_id)
+);
+
+-- Supplier
+
+CREATE TABLE Supplier(
+    supplier_name VARCHAR(10), 
+    location VARCHAR(10) NOT NULL,
+    is_active BOOLEAN DEFAULT TRUE,
+    telephone CHAR(11) NOT NULL,
+    PRIMARY KEY (supplier_name)
+);
+
 -- Tool
 
 CREATE TABLE Tool (
@@ -174,8 +201,20 @@ CREATE TABLE Applies_on(
 
 CREATE TABLE cashier_feedbacks_received (
     employee_ssn CHAR(9),
-    feedback SMALLINT,
+    feedback SMALLINT CHECK
+        (
+            feedback >= 0 AND feedback <= 5
+        ),
     PRIMARY KEY (employee_ssn,feedback)
+);
+
+-- Contains
+
+CREATE TABLE Contains(
+    ingredient_name VARCHAR(20),
+    menu_item_id INT NOT NULL,
+    quantity_used INT,
+    PRIMARY KEY(ingredient_name, menu_item_id)
 );
 
 -- cuisines
@@ -190,8 +229,30 @@ CREATE TABLE cuisines (
 
 CREATE TABLE delivery_feedbacks_received (
     employee_ssn CHAR(9),
-    feedback SMALLINT,
+    feedback SMALLINT CHECK
+        (
+            feedback >= 0 AND feedback <= 5
+        ),
     PRIMARY KEY (employee_ssn,feedback)
+);
+
+-- Has
+
+CREATE TABLE Has (
+    order_id INT,
+    menu_item_id INT,
+    quantity TINYINT NOT NULL,
+    notes TEXT,
+    PRIMARY KEY (order_id, menu_item_id)
+);
+
+-- Sells
+
+CREATE TABLE Sells(
+    ingredient_name VARCHAR(20),
+    supplier_name VARCHAR(10),
+    price DECIMAL(10, 2),
+    PRIMARY KEY(ingredient_name, supplier_name)
 );
 
 -- Stores
@@ -201,5 +262,14 @@ CREATE TABLE Stores(
     ingredient_name VARCHAR(50) NOT NULL,
     available_quantity FLOAT NOT NULL,
     PRIMARY KEY(branch_name, ingredient_name)
+);
+
+-- Supplied_in
+
+CREATE TABLE Supplied_in(
+    ingredient_name VARCHAR(20),
+    shipment_id INT,
+    quantity INT,
+    PRIMARY KEY(ingredient_name, shipment_id)
 );
 

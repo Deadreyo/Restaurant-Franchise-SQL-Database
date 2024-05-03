@@ -662,6 +662,45 @@ VALUES(
     "0"
 );
 
+-- Shipment
+
+
+INSERT INTO shipment (shipment_id, status, number_of_items, total_price,supplier_name,branch_name)
+VALUES (1,True, 20, 100, "Valeo", "number 1");
+
+INSERT INTO shipment (shipment_id, status, number_of_items, total_price,supplier_name,branch_name)
+VALUES (2,False, 30, 100, "IBM", "number 2");
+
+INSERT INTO shipment (shipment_id, status, number_of_items, total_price,supplier_name,branch_name)
+VALUES (3,True, 50, 50, "google", "number 3");
+
+INSERT INTO shipment (shipment_id, status, number_of_items, total_price,supplier_name,branch_name)
+VALUES (4,True, 10, 200, "seimens", "number 4");
+
+-- Supplier
+
+INSERT INTO supplier 
+VALUES ("Valeo", "nasr city", TRUE);
+
+INSERT INTO supplier 
+VALUES ("Valeo", "Nasr City", TRUE);
+
+INSERT INTO supplier 
+VALUES ("XYZ Company", "123 Main Street", TRUE);
+
+INSERT INTO supplier 
+VALUES ("ABC Corporation", "456 Elm Street", FALSE);
+
+INSERT INTO supplier 
+VALUES ("Smith Enterprises", "789 Oak Avenue", TRUE);
+
+INSERT INTO supplier 
+VALUES ("Global Parts Inc.", "10 Pine Street", FALSE);
+
+INSERT INTO supplier 
+VALUES ("Tech Solutions Ltd.", "555 Broadway", TRUE);
+
+
 -- Tool
 
 INSERT INTO Tool VALUES 
@@ -756,6 +795,59 @@ VALUES
   ("221456736",3),
   ("229080260",3);
 
+-- Has
+
+INSERT INTO Has VALUES
+    (1, 5, 2, 'No onions, please'),
+    (1, 4, 3, NULL),
+    (1, 3, 4, 'Extra cheese'),
+    (1, 2, 5, NULL),
+    (1, 1, 6, 'Spicy, if possible'),
+    (2, 5, 1, NULL),
+    (2, 4, 2, 'Gluten-free bread'),
+    (2, 3, 3, NULL),
+    (2, 2, 4, 'No salt in the fries'),
+    (2, 1, 5, NULL),
+    (3, 5, 6, 'Dressing on the side'),
+    (3, 4, 1, NULL),
+    (3, 3, 2, 'Extra olives'),
+    (3, 2, 3, NULL),
+    (3, 1, 4, 'Cooked medium rare'),
+    (4, 5, 5, NULL),
+    (4, 4, 6, 'No ice in the drink'),
+    (4, 3, 1, NULL),
+    (4, 2, 2, 'Add bacon'),
+    (4, 1, 3, NULL),
+    (5, 5, 4, 'Vegan cheese only'),
+    (6, 2, 6, NULL),
+    (6, 1, 1, NULL),
+    (7, 5, 2, NULL),
+    (7, 4, 3, NULL),
+    (7, 3, 4, NULL),
+    (7, 2, 5, NULL),
+    (7, 1, 6, NULL),
+    (8, 5, 1, NULL),
+    (8, 4, 2, NULL),
+    (8, 3, 3, NULL)
+;
+
+-- Sells
+
+INSERT INTO sells
+VALUES ("tomato", "Valeo", 100, 200);
+
+INSERT INTO sells
+VALUES ("banana", "IBM", 1000, 20000);
+
+INSERT INTO sells
+VALUES ("milk", "google", 35, 50000);
+
+INSERT INTO sells
+VALUES ("meat", "seimens", 400, 100000);
+
+
+
+
 -- Stores
 
 INSERT INTO `Stores` (`branch_name`,`ingredient_name`,`available_quantity`)
@@ -781,4 +873,30 @@ VALUES
   ("Branch 3","Ingredient M",15),
   ("Branch 3","Ingredient N",74);
 
+
+-- Supplied_in
+
+INSERT INTO supplied_in 
+VALUES (tomato, 1, 5, 20);
+
+INSERT INTO supplied_in 
+VALUES (banana, 1, 10, 200);
+
+INSERT INTO supplied_in 
+VALUES (milk, 1, 15, 100);
+
+INSERT INTO supplied_in 
+VALUES (meat, 1, 300, 100);
+
+INSERT INTO supplied_in 
+VALUES (tomato, 2, 5, 50);
+
+INSERT INTO supplied_in 
+VALUES (banana, 2, 10, 100);
+
+INSERT INTO supplied_in 
+VALUES (milk, 2, 15, 200);
+
+INSERT INTO supplied_in 
+VALUES (meat, 2, 300, 200);
 

@@ -64,6 +64,20 @@ ALTER TABLE
     ADD CONSTRAINT  FOREIGN KEY(customer_phone) REFERENCES Customer(customer_phone) ON UPDATE CASCADE ON DELETE CASCADE,
     ADD CONSTRAINT FOREIGN KEY(branch_name) REFERENCES Branch(branch_name) ON UPDATE CASCADE ON DELETE CASCADE;
 
+-- Shipment
+
+ALTER TABLE Shipment
+	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES branch(branch_name)
+    ON UPDATE CASCADE
+    ON DELETE RESTRICT
+;
+
+ALTER TABLE Shipment
+	ADD CONSTRAINT FOREIGN KEY (supplier_name) REFERENCES Supplier(supplier_name)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+;
+
 -- Transaction
 
  ALTER TABLE Transaction
@@ -90,6 +104,20 @@ ALTER TABLE cashier_feedbacks_received
     ON DELETE CASCADE
 ;
 
+-- Contains
+
+ALTER TABLE Contains
+	ADD CONSTRAINT FOREIGN KEY (ingredient_name) REFERENCES Ingredient(ingredient_name)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+;
+
+ALTER TABLE Contains
+	ADD CONSTRAINT FOREIGN KEY (menu_item_id) REFERENCES Menu_item(menu_item_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+;
+
 -- cuisines
 
 ALTER TABLE cuisines
@@ -106,9 +134,35 @@ ALTER TABLE delivery_feedbacks_received
     ON DELETE CASCADE
 ;
 
+-- Has
+
+ALTER TABLE Has
+	ADD CONSTRAINT FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    ADD FOREIGN KEY (menu_item_id) REFERENCES Menu_item(menu_item_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+;
+
 -- Stores
 
 ALTER TABLE
     Stores ADD FOREIGN KEY(branch_name) REFERENCES Branch(branch_name) ON DELETE CASCADE ON UPDATE CASCADE,
     ADD FOREIGN KEY(ingredient_name) REFERENCES Ingredient(ingredient_name) ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- Supplied_in
+
+ALTER TABLE Supplied_in
+	ADD CONSTRAINT FOREIGN KEY (ingredient_name) REFERENCES Ingredient(ingredient_name)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+;
+
+ALTER TABLE Supplied_in
+	ADD CONSTRAINT FOREIGN KEY (shipment_id) REFERENCES Shipment(shipment_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+;
+
 
