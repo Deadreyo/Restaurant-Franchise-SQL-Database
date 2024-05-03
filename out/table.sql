@@ -75,6 +75,13 @@ CREATE TABLE employee(
     PRIMARY KEY(employee_ssn)
 );
 
+-- ingredient
+
+CREATE TABLE Ingredient(
+    ingredient_name VARCHAR(20),
+    PRIMARY KEY(ingredient_name)
+);
+
 -- manager
 
 CREATE TABLE manager (
@@ -89,10 +96,11 @@ CREATE TABLE manager (
 CREATE TABLE Menu_item(
     menu_item_id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(30) NOT NULL,
-    category VARCHAR(20) NOT NULL,
-    size ENUM('Small', 'Medium', 'Large'),
+    category ENUM('main dish', 'appetizer', 'salads', 'hot drinks', 'cold drinks', 'desserts') NOT NULL,
+    size ENUM('small', 'medium', 'large') NOT NULL,
     price FLOAT NOT NULL,
-    PRIMARY KEY(menu_item_id)
+    PRIMARY KEY(menu_item_id),
+    UNIQUE (name, size)
 );
 
 -- Offer
@@ -133,6 +141,35 @@ CREATE TABLE Orders(
     PRIMARY KEY(order_id)
 );
 
+-- Shipment
+
+CREATE TABLE Shipment(
+    shipment_id INT,
+    date_and_time DATE DEFAULT CURRENT_DATE,
+    STATUS VARCHAR(10) NOT NULL,
+    supplier_name VARCHAR(10),
+    branch_name VARCHAR(20),
+    PRIMARY KEY(shipment_id)
+);
+
+-- Supplier
+
+CREATE TABLE Supplier(
+    supplier_name VARCHAR(10), 
+    location VARCHAR(10) NOT NULL,
+    is_active BOOLEAN DEFAULT TRUE,
+    telephone CHAR(11) NOT NULL,
+    PRIMARY KEY (supplier_name)
+);
+
+-- Tool
+
+CREATE TABLE Tool (
+    tool_name VARCHAR(20) NOT NULL,
+    price FLOAT NOT NULL,
+    PRIMARY KEY (tool_name)
+);
+
 -- Transaction
 
 CREATE TABLE Transaction (
@@ -149,6 +186,7 @@ CREATE TABLE Transaction (
             feedback >= 0 AND feedback <= 5
         ),
     amount_with_discount FLOAT,
+    employee_ssn CHAR(9),
     PRIMARY KEY(order_id)
 );
 
@@ -160,12 +198,40 @@ CREATE TABLE Applies_on(
     PRIMARY KEY(order_id, offer_id)
 );
 
+-- Can_use
+
+CREATE TABLE Can_use (
+    employee_ssn CHAR(9),
+    tool_name VARCHAR(20),
+    PRIMARY KEY (employee_ssn, tool_name)
+);
+
 -- cashier_feedbacks_received
 
 CREATE TABLE cashier_feedbacks_received (
     employee_ssn CHAR(9),
-    feedback SMALLINT,
+    feedback SMALLINT CHECK
+        (
+            feedback >= 0 AND feedback <= 5
+        ),
     PRIMARY KEY (employee_ssn,feedback)
+);
+
+-- Contains
+
+CREATE TABLE Contains(
+    ingredient_name VARCHAR(20),
+    menu_item_id INT NOT NULL,
+    quantity_used INT,
+    PRIMARY KEY(ingredient_name, menu_item_id)
+);
+
+-- Cooks
+
+CREATE TABLE Cooks (
+    employee_ssn CHAR(9),
+    order_id INT,
+    PRIMARY KEY (employee_ssn, order_id)
 );
 
 -- cuisines
@@ -180,8 +246,46 @@ CREATE TABLE cuisines (
 
 CREATE TABLE delivery_feedbacks_received (
     employee_ssn CHAR(9),
-    feedback SMALLINT,
+    feedback SMALLINT CHECK
+        (
+            feedback >= 0 AND feedback <= 5
+        ),
     PRIMARY KEY (employee_ssn,feedback)
+);
+
+-- Has
+
+CREATE TABLE Has (
+    order_id INT,
+    menu_item_id INT,
+    quantity TINYINT NOT NULL,
+    notes TEXT,
+    PRIMARY KEY (order_id, menu_item_id)
+);
+
+-- Made_with
+
+CREATE TABLE Made_with (
+    tool_name VARCHAR(20),
+    menu_item_id INT,
+    PRIMARY KEY (tool_name, menu_item_id)
+);
+
+-- Makes
+
+CREATE TABLE Makes (
+    branch_name VARCHAR(20),
+    offer_id INT,
+    PRIMARY KEY (branch_name, offer_id)
+);
+
+-- Sells
+
+CREATE TABLE Sells(
+    ingredient_name VARCHAR(20),
+    supplier_name VARCHAR(10),
+    price DECIMAL(10, 2),
+    PRIMARY KEY(ingredient_name, supplier_name)
 );
 
 -- Stores
@@ -191,5 +295,14 @@ CREATE TABLE Stores(
     ingredient_name VARCHAR(50) NOT NULL,
     available_quantity FLOAT NOT NULL,
     PRIMARY KEY(branch_name, ingredient_name)
+);
+
+-- Supplied_in
+
+CREATE TABLE Supplied_in(
+    ingredient_name VARCHAR(20),
+    shipment_id INT,
+    quantity INT,
+    PRIMARY KEY(ingredient_name, shipment_id)
 );
 

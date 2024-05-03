@@ -12,5 +12,6 @@ CREATE TABLE Transaction (
             feedback >= 0 AND feedback <= 5
         ),
     amount_with_discount FLOAT,
+    employee_ssn CHAR(9),
     PRIMARY KEY(order_id)
 );

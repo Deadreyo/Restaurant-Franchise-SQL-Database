@@ -1,0 +1,22 @@
+INSERT INTO Supplier (supplier_name, location, telephone) 
+VALUES 
+    ('Fresh Farms', 'Farmington', '12345678901'),
+    ('Organic Harvest', 'Springfield', '23456789012'),
+    ('Sunshine Groceries', 'Sunnyvale', '34567890123'),
+    ('Green Grocers', 'Greenfield', '45678901234'),
+    ('Nature's Best', 'Bloomfield', '56789012345'),
+    ('Farm Fresh', 'Fertile Fields', '67890123456'),
+    ('Eco-Friendly Foods', 'Eco Valley', '78901234567'),
+    ('Healthy Harvest', 'Hillside', '89012345678'),
+    ('Local Produce Co.', 'Lakeside', '90123456789'),
+    ('Global Foods Inc.', 'Globeville', '01234567890'),
+    ('Sustainable Supply', 'Sustained Springs', '12345678901'),
+    ('Sunrise Farms', 'Dawn Valley', '23456789012'),
+    ('Prime Provisions', 'Pristine Peak', '34567890123'),
+    ('Earth's Bounty', 'Eco Valley', '45678901234'),
+    ('Harmony Grocers', 'Haven Heights', '56789012345'),
+    ('Wholesome Goods', 'Waterside', '67890123456'),
+    ('Purity Produce', 'Pure Plains', '78901234567'),
+    ('Green Thumb Produce', 'Growth Grove', '89012345678'),
+    ('Natural Nourishment', 'Nature's Nest', '90123456789'),
+    ('Purely Organic', 'Organic Oasis', '01234567890');

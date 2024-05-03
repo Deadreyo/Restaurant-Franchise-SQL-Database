@@ -1,0 +1,22 @@
+INSERT INTO Ingredient (ingredient_name) 
+VALUES 
+    ('Tomato'),
+    ('Lettuce'),
+    ('Onion'),
+    ('Cucumber'),
+    ('Carrot'),
+    ('Spinach'),
+    ('Bell Pepper'),
+    ('Mushroom'),
+    ('Broccoli'),
+    ('Cauliflower'),
+    ('Potato'),
+    ('Sweet Potato'),
+    ('Zucchini'),
+    ('Eggplant'),
+    ('Green Beans'),
+    ('Celery'),
+    ('Kale'),
+    ('Radish'),
+    ('Arugula'),
+    ('Cabbage');

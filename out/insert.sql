@@ -259,20 +259,51 @@ VALUES
 
 -- Menu_Item
 
-INSERT INTO Menu_item
+INSERT INTO Menu_item (menu_item_id, name, category, size, price) VALUES
+    ('1', 'Cheese Cake', 'appetizer', 'medium', '28.5'),
+    ('2', 'Green Salad', 'salads', 'large', '42.75'),
+    ('3', 'Chicken Salad', 'salads', 'large', '86.25'),
+    ('4', 'Italian Chicken', 'main dish', 'large', '48'),
+    ('5', 'Chocolate Tarte', 'desserts', 'large', '97.25'),
+    ('6', 'Tea', 'hot drinks', 'small', '27.75'),
+    ('7', 'Onion Rings', 'appetizer', 'small', '28.25'),
+    ('8', 'Fruits', 'salads', 'medium', '33.75'),
+    ('9', 'Sweet beans', 'main dish', 'large', '53.5'),
+    ('10', 'Chocolate rolls', 'desserts', 'large', '13.25'),
+    ('11', 'Mozzarela sticks', 'appetizer', 'large', '99.5'),
+    ('12', 'Coffee', 'hot drinks', 'medium', '18.5'),
+    ('13', 'Nescafe', 'hot drinks', 'medium', '83.5'),
+    ('14', 'Green burger', 'main dish', 'medium', '8.5'),
+    ('15', 'Vanilla Milkshake', 'cold drinks', 'medium', '32.75'),
+    ('16', 'Cheesy bites', 'appetizer', 'small', '54.5'),
+    ('17', 'Roasted beef', 'main dish', 'large', '13'),
+    ('18', 'Fries', 'appetizer', 'medium', '45.75'),
+    ('19', 'Chips', 'main dish', 'large', '28'),
+    ('20', 'Cheese', 'desserts', 'large', '74.75'),
+    ('21', 'Rice', 'main dish', 'medium', '84.5'),
+    ('22', 'Cheese fries', 'appetizer', 'large', '66.25'),
+    ('23', 'Sausages', 'main dish', 'small', '21.75'),
+    ('24', 'Sausages', 'main dish', 'medium', '72.75'),
+    ('25', 'Bacon', 'appetizer', 'small', '66'),
+    ('26', 'Shoes', 'desserts', 'medium', '29.75'),
+    ('27', 'Chips', 'appetizer', 'small', '64.25'),
+    ('28', 'Peppers', 'appetizer', 'small', '62.25'),
+    ('29', 'Salad', 'main dish', 'medium', '60.75'),
+    ('30', 'Juice', 'cold drinks', 'small', '22.25');
+
+INSERT INTO Menu_item (name, category, size, price)
 VALUES(
-    1,
     'Pepperoni Pizza',
-    'pizza',
-    'Small',
+    'main dish',
+    'small',
     20
 );
 
-INSERT INTO Menu_item(name, category, size, price)
+INSERT INTO Menu_item (name, category, size, price)
 VALUES(
     'Pepperoni Pizza',
-    'pizza',
-    'Medium',
+    'main dish',
+    'medium',
     30
 );
 
@@ -631,6 +662,69 @@ VALUES(
     "0"
 );
 
+-- Shipment
+
+
+INSERT INTO shipment (shipment_id, status, number_of_items, total_price,supplier_name,branch_name)
+VALUES (1,True, 20, 100, "Valeo", "number 1");
+
+INSERT INTO shipment (shipment_id, status, number_of_items, total_price,supplier_name,branch_name)
+VALUES (2,False, 30, 100, "IBM", "number 2");
+
+INSERT INTO shipment (shipment_id, status, number_of_items, total_price,supplier_name,branch_name)
+VALUES (3,True, 50, 50, "google", "number 3");
+
+INSERT INTO shipment (shipment_id, status, number_of_items, total_price,supplier_name,branch_name)
+VALUES (4,True, 10, 200, "seimens", "number 4");
+
+-- Supplier
+
+INSERT INTO supplier 
+VALUES ("Valeo", "nasr city", TRUE);
+
+INSERT INTO supplier 
+VALUES ("Valeo", "Nasr City", TRUE);
+
+INSERT INTO supplier 
+VALUES ("XYZ Company", "123 Main Street", TRUE);
+
+INSERT INTO supplier 
+VALUES ("ABC Corporation", "456 Elm Street", FALSE);
+
+INSERT INTO supplier 
+VALUES ("Smith Enterprises", "789 Oak Avenue", TRUE);
+
+INSERT INTO supplier 
+VALUES ("Global Parts Inc.", "10 Pine Street", FALSE);
+
+INSERT INTO supplier 
+VALUES ("Tech Solutions Ltd.", "555 Broadway", TRUE);
+
+
+-- Tool
+
+INSERT INTO Tool VALUES 
+    ('Stove', 1500),
+    ('Oven', 2000),
+    ('Microwave', 1000),
+    ('Refrigerator', 2500),
+    ('Dishwasher', 2000),
+    ('Knife', 50),
+    ('Frying pan', 100),
+    ('Cutting board', 30),
+    ('Blender', 150),
+    ('Toaster', 50),
+    ('Coffee maker', 100),
+    ('Grill', 200),
+    ('Waffle maker', 100),
+    ('Rice cooker', 100),
+    ('Pressure cooker', 150),
+    ('Juicer', 100),
+    ('Ice cream maker', 200),
+    ('Bread maker', 150),
+    ('Electric kettle', 50)
+;
+
 -- Transaction
 
 INSERT INTO `Transaction` (`order_id`,`payment_method`,`date_and_time`,`feedback`)
@@ -645,6 +739,25 @@ VALUES
 
 INSERT INTO `Applies_on`(`order_id`, `offer_id`)
 VALUES(1, 2),(1, 3),(1, 4),(2, 5),(2, 6),(2, 7),(3, 8),(3, 9),(3, 10),(4, 11),(4, 12),(4, 14),(6, 10),(6, 11),(6, 12),(7, 18),(8, 20),(9, 20),(5, 9),(10, 6);
+
+-- Can_use
+
+INSERT INTO Can_use (employee_ssn, tool_name) VALUES 
+    ('268823444', 'Stove'),
+    ('268823444', 'Oven'),
+    ('268823444', 'Microwave'),
+    ('909557231', 'Blender'),
+    ('909557231', 'Knife'),
+    ('833681284', 'Knife'),
+    ('833681284', 'Cutting board'),
+    ('833681284', 'Frying pan'),
+    ('679658701', 'Rice cooker'),
+    ('679658701', 'Pressure cooker'),
+    ('679658701', 'Knife'),
+    ('743032113', 'Knife'),
+    ('743032113', 'Frying pan'),
+    ('743032113', 'Cutting board');
+
 
 -- cashier_feedbacks_received
 
@@ -666,6 +779,31 @@ VALUES
   ("954221751",4),
   ("183326415",3),
   ("112785327",5);
+
+
+-- Cooks
+
+INSERT INTO Cooks (employee_ssn, order_id) VALUES 
+    ('268823444', 1),
+    ('909557231', 2),
+    ('833681284', 3),
+    ('679658701', 4),
+    ('743032113', 5),
+    ('268823444', 6),
+    ('909557231', 7),
+    ('833681284', 8),
+    ('679658701', 9),
+    ('743032113', 10),
+    ('268823444', 11),
+    ('909557231', 12),
+    ('833681284', 13),
+    ('679658701', 14),
+    ('743032113', 15),
+    ('268823444', 16),
+    ('909557231', 17),
+    ('833681284', 18),
+    ('679658701', 19),
+    ('743032113', 20);
 
 
 -- cuisines
@@ -701,6 +839,104 @@ VALUES
   ("221456736",3),
   ("229080260",3);
 
+-- Has
+
+INSERT INTO Has VALUES
+    (1, 5, 2, 'No onions, please'),
+    (1, 4, 3, NULL),
+    (1, 3, 4, 'Extra cheese'),
+    (1, 2, 5, NULL),
+    (1, 1, 6, 'Spicy, if possible'),
+    (2, 5, 1, NULL),
+    (2, 4, 2, 'Gluten-free bread'),
+    (2, 3, 3, NULL),
+    (2, 2, 4, 'No salt in the fries'),
+    (2, 1, 5, NULL),
+    (3, 5, 6, 'Dressing on the side'),
+    (3, 4, 1, NULL),
+    (3, 3, 2, 'Extra olives'),
+    (3, 2, 3, NULL),
+    (3, 1, 4, 'Cooked medium rare'),
+    (4, 5, 5, NULL),
+    (4, 4, 6, 'No ice in the drink'),
+    (4, 3, 1, NULL),
+    (4, 2, 2, 'Add bacon'),
+    (4, 1, 3, NULL),
+    (5, 5, 4, 'Vegan cheese only'),
+    (6, 2, 6, NULL),
+    (6, 1, 1, NULL),
+    (7, 5, 2, NULL),
+    (7, 4, 3, NULL),
+    (7, 3, 4, NULL),
+    (7, 2, 5, NULL),
+    (7, 1, 6, NULL),
+    (8, 5, 1, NULL),
+    (8, 4, 2, NULL),
+    (8, 3, 3, NULL)
+;
+
+-- Made_with
+
+INSERT INTO Made_with (tool_name, menu_item_id) VALUES 
+    ('Stove', 4),
+    ('Oven', 5),
+    ('Microwave', 7),
+    ('Refrigerator', 2),
+    ('Dishwasher', 8),
+    ('Knife', 4),
+    ('Frying pan', 4),
+    ('Cutting board', 4),
+    ('Blender', 10),
+    ('Toaster', 6),
+    ('Coffee maker', 12),
+    ('Grill', 11),
+    ('Waffle maker', 9),
+    ('Rice cooker', 21),
+    ('Pressure cooker', 19),
+    ('Juicer', 15),
+    ('Ice cream maker', 20),
+    ('Bread maker', 14),
+    ('Electric kettle', 30),
+    ('Knife', 29),
+    ('Cutting board', 29),
+    ('Frying pan', 23),
+    ('Knife', 23),
+    ('Cutting board', 23),
+    ('Frying pan', 24),
+    ('Knife', 24),
+    ('Cutting board', 24),
+    ('Microwave', 25),
+    ('Knife', 25),
+    ('Frying pan', 25),
+    ('Cutting board', 25),
+    ('Microwave', 28),
+    ('Knife', 28),
+    ('Frying pan', 28),
+    ('Cutting board', 28);
+
+
+-- Makes
+
+INSERT INTO ...
+;
+
+-- Sells
+
+INSERT INTO sells
+VALUES ("tomato", "Valeo", 100, 200);
+
+INSERT INTO sells
+VALUES ("banana", "IBM", 1000, 20000);
+
+INSERT INTO sells
+VALUES ("milk", "google", 35, 50000);
+
+INSERT INTO sells
+VALUES ("meat", "seimens", 400, 100000);
+
+
+
+
 -- Stores
 
 INSERT INTO `Stores` (`branch_name`,`ingredient_name`,`available_quantity`)
@@ -726,4 +962,30 @@ VALUES
   ("Branch 3","Ingredient M",15),
   ("Branch 3","Ingredient N",74);
 
+
+-- Supplied_in
+
+INSERT INTO supplied_in 
+VALUES (tomato, 1, 5, 20);
+
+INSERT INTO supplied_in 
+VALUES (banana, 1, 10, 200);
+
+INSERT INTO supplied_in 
+VALUES (milk, 1, 15, 100);
+
+INSERT INTO supplied_in 
+VALUES (meat, 1, 300, 100);
+
+INSERT INTO supplied_in 
+VALUES (tomato, 2, 5, 50);
+
+INSERT INTO supplied_in 
+VALUES (banana, 2, 10, 100);
+
+INSERT INTO supplied_in 
+VALUES (milk, 2, 15, 200);
+
+INSERT INTO supplied_in 
+VALUES (meat, 2, 300, 200);
 
