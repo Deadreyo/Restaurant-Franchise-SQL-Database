@@ -92,7 +92,9 @@ GROUP BY employee_ssn;
 
 -- Cooks
 
-SELECT ...
+SELECT first_name, last_name, order_id
+FROM Cooks, Employee
+WHERE Cooks.employee_ssn = Employee.employee_ssn
 ;
 
 -- Stores

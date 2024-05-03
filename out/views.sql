@@ -46,12 +46,6 @@ CREATE VIEW Transaction_view AS
     FROM Transaction, Orders, Customer
     WHERE Transaction.order_id = Orders.order_id AND Orders.customer_phone = Customer.customer_phone;
 
--- Cooks
-
-CREATE VIEW ... AS
-SELECT ...
-;
-
 -- Has
 
 CREATE VIEW Orders_has_items AS

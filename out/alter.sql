@@ -120,10 +120,13 @@ ALTER TABLE Contains
 
 -- Cooks
 
-ALTER TABLE ...
-	ADD CONSTRAINT FOREIGN KEY (...) REFERENCES ...(...)
-    ON UPDATE ...
-    ON DELETE ...
+ALTER TABLE Cooks
+	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES Employee(employee_ssn)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    ADD FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
 ;
 
 -- cuisines
