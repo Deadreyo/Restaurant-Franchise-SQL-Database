@@ -197,6 +197,14 @@ CREATE TABLE Applies_on(
     PRIMARY KEY(order_id, offer_id)
 );
 
+-- Can_use
+
+CREATE TABLE Can_use (
+    employee_ssn CHAR(9),
+    tool_name VARCHAR(20),
+    PRIMARY KEY (employee_ssn, tool_name)
+);
+
 -- cashier_feedbacks_received
 
 CREATE TABLE cashier_feedbacks_received (

@@ -46,6 +46,15 @@ CREATE VIEW Transaction_view AS
     FROM Transaction, Orders, Customer
     WHERE Transaction.order_id = Orders.order_id AND Orders.customer_phone = Customer.customer_phone;
 
+-- Can_use
+
+CREATE VIEW Chef_can_use_tools AS
+SELECT first_name, last_name, GROUP_CONCAT(tool_name) as tools_used
+FROM Can_use, Employee
+WHERE Can_use.employee_ssn = Employee.employee_ssn
+GROUP BY Employee.employee_ssn
+;
+
 -- Has
 
 CREATE VIEW Orders_has_items AS

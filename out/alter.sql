@@ -96,6 +96,17 @@ ALTER TABLE
     ADD CONSTRAINT FOREIGN KEY(offer_id) REFERENCES Offer(offer_id) ON UPDATE CASCADE ON DELETE CASCADE
     ;
 
+-- Can_use
+
+ALTER TABLE Can_use
+	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES Chef(employee_ssn)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    ADD FOREIGN KEY (tool_id) REFERENCES Tool(tool_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+;
+
 -- cashier_feedbacks_received
 
 ALTER TABLE cashier_feedbacks_received
@@ -121,7 +132,7 @@ ALTER TABLE Contains
 -- Cooks
 
 ALTER TABLE Cooks
-	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES Employee(employee_ssn)
+	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES Chef(employee_ssn)
     ON UPDATE CASCADE
     ON DELETE CASCADE,
     ADD FOREIGN KEY (order_id) REFERENCES Orders(order_id)
