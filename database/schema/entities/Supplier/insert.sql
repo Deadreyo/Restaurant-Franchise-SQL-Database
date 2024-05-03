@@ -1,20 +1,22 @@
-INSERT INTO supplier 
-VALUES ("Valeo", "nasr city", TRUE);
-
-INSERT INTO supplier 
-VALUES ("Valeo", "Nasr City", TRUE);
-
-INSERT INTO supplier 
-VALUES ("XYZ Company", "123 Main Street", TRUE);
-
-INSERT INTO supplier 
-VALUES ("ABC Corporation", "456 Elm Street", FALSE);
-
-INSERT INTO supplier 
-VALUES ("Smith Enterprises", "789 Oak Avenue", TRUE);
-
-INSERT INTO supplier 
-VALUES ("Global Parts Inc.", "10 Pine Street", FALSE);
-
-INSERT INTO supplier 
-VALUES ("Tech Solutions Ltd.", "555 Broadway", TRUE);
+INSERT INTO Supplier (supplier_name, location, telephone) 
+VALUES 
+    ('Fresh Farms', 'Farmington', '12345678901'),
+    ('Organic Harvest', 'Springfield', '23456789012'),
+    ('Sunshine Groceries', 'Sunnyvale', '34567890123'),
+    ('Green Grocers', 'Greenfield', '45678901234'),
+    ('Nature's Best', 'Bloomfield', '56789012345'),
+    ('Farm Fresh', 'Fertile Fields', '67890123456'),
+    ('Eco-Friendly Foods', 'Eco Valley', '78901234567'),
+    ('Healthy Harvest', 'Hillside', '89012345678'),
+    ('Local Produce Co.', 'Lakeside', '90123456789'),
+    ('Global Foods Inc.', 'Globeville', '01234567890'),
+    ('Sustainable Supply', 'Sustained Springs', '12345678901'),
+    ('Sunrise Farms', 'Dawn Valley', '23456789012'),
+    ('Prime Provisions', 'Pristine Peak', '34567890123'),
+    ('Earth's Bounty', 'Eco Valley', '45678901234'),
+    ('Harmony Grocers', 'Haven Heights', '56789012345'),
+    ('Wholesome Goods', 'Waterside', '67890123456'),
+    ('Purity Produce', 'Pure Plains', '78901234567'),
+    ('Green Thumb Produce', 'Growth Grove', '89012345678'),
+    ('Natural Nourishment', 'Nature's Nest', '90123456789'),
+    ('Purely Organic', 'Organic Oasis', '01234567890');

@@ -1,23 +1,22 @@
-INSERT INTO supplied_in 
-VALUES (tomato, 1, 5, 20);
-
-INSERT INTO supplied_in 
-VALUES (banana, 1, 10, 200);
-
-INSERT INTO supplied_in 
-VALUES (milk, 1, 15, 100);
-
-INSERT INTO supplied_in 
-VALUES (meat, 1, 300, 100);
-
-INSERT INTO supplied_in 
-VALUES (tomato, 2, 5, 50);
-
-INSERT INTO supplied_in 
-VALUES (banana, 2, 10, 100);
-
-INSERT INTO supplied_in 
-VALUES (milk, 2, 15, 200);
-
-INSERT INTO supplied_in 
-VALUES (meat, 2, 300, 200);
+INSERT INTO Supplied_in (ingredient_name, shipment_id, quantity) 
+VALUES 
+    ('Tomato', 1, 100),
+    ('Lettuce', 2, 150),
+    ('Onion', 3, 120),
+    ('Cucumber', 4, 80),
+    ('Carrot', 5, 200),
+    ('Spinach', 6, 90),
+    ('Bell Pepper', 7, 110),
+    ('Mushroom', 8, 70),
+    ('Broccoli', 9, 100),
+    ('Cauliflower', 10, 120),
+    ('Potato', 11, 150),
+    ('Sweet Potato', 12, 80),
+    ('Zucchini', 13, 100),
+    ('Eggplant', 14, 130),
+    ('Green Beans', 15, 70),
+    ('Celery', 16, 110),
+    ('Kale', 17, 90),
+    ('Radish', 18, 120),
+    ('Arugula', 19, 100),
+    ('Cabbage', 20, 80);
