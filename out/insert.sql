@@ -881,6 +881,11 @@ INSERT INTO Made_with (tool_name, menu_item_id) VALUES
     ('Cutting board', 28);
 
 
+-- Makes
+
+INSERT INTO ...
+;
+
 -- Sells
 
 INSERT INTO sells

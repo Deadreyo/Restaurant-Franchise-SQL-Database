@@ -148,6 +148,7 @@ CREATE TABLE Shipment(
     date_and_time DATE DEFAULT CURRENT_DATE,
     STATUS VARCHAR(10) NOT NULL,
     supplier_name VARCHAR(10),
+    branch_name VARCHAR(20),
     PRIMARY KEY(shipment_id)
 );
 
@@ -268,6 +269,14 @@ CREATE TABLE Made_with (
     tool_name VARCHAR(20),
     menu_item_id INT,
     PRIMARY KEY (tool_name, menu_item_id)
+);
+
+-- Makes
+
+CREATE TABLE Makes (
+    branch_name VARCHAR(20),
+    offer_id INT,
+    PRIMARY KEY (branch_name, offer_id)
 );
 
 -- Sells
