@@ -1,0 +1,4 @@
+SELECT *
+FROM Tool
+ORDER BY price DESC
+;

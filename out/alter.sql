@@ -70,6 +70,9 @@ ALTER TABLE
 	ADD CONSTRAINT FOREIGN KEY (order_id) REFERENCES Orders(order_id)
     ON UPDATE CASCADE
     ON DELETE CASCADE
+    ADD FOREIGN KEY (employee_ssn) REFERENCES Employee(employee_ssn)
+    ON UPDATE CASCADE
+    ON DELETE SET NULL
 ;
 
 -- Applies_on
@@ -97,7 +100,7 @@ ALTER TABLE cuisines
 
 -- delivery_feedbacks_received
 
-ALTER TABLE delivery_guy
+ALTER TABLE delivery_feedbacks_received
 	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES employee(employee_ssn)
     ON UPDATE CASCADE
     ON DELETE CASCADE
