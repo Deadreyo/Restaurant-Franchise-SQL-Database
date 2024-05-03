@@ -4,7 +4,6 @@ CREATE TABLE employee(
     employee_ssn CHAR(9),
     date_of_birth DATE NOT NULL,
     age SMALLINT NOT NULL,
-    age SMALLINT NOT NULL,
     salary INTEGER NOT NULL,
     hiring_date DATE NOT NULL,
     experience_years SMALLINT,
