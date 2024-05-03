@@ -32,12 +32,6 @@ CREATE VIEW Order_cost AS SELECT
 FROM
     Orders;
 
--- Tool
-
-CREATE VIEW ... AS
-SELECT ...
-;
-
 -- Transaction
 
 CREATE VIEW Transaction_view AS

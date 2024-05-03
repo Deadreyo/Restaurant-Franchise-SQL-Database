@@ -64,14 +64,6 @@ ALTER TABLE
     ADD CONSTRAINT  FOREIGN KEY(customer_phone) REFERENCES Customer(customer_phone) ON UPDATE CASCADE ON DELETE CASCADE,
     ADD CONSTRAINT FOREIGN KEY(branch_name) REFERENCES Branch(branch_name) ON UPDATE CASCADE ON DELETE CASCADE;
 
--- Tool
-
-ALTER TABLE ...
-	ADD CONSTRAINT FOREIGN KEY (...) REFERENCES ...(...)
-    ON UPDATE ...
-    ON DELETE ...
-;
-
 -- Transaction
 
  ALTER TABLE Transaction
