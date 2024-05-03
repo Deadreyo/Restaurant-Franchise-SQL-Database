@@ -118,6 +118,14 @@ ALTER TABLE Contains
     ON DELETE CASCADE
 ;
 
+-- Cooks
+
+ALTER TABLE ...
+	ADD CONSTRAINT FOREIGN KEY (...) REFERENCES ...(...)
+    ON UPDATE ...
+    ON DELETE ...
+;
+
 -- cuisines
 
 ALTER TABLE cuisines
@@ -138,6 +146,17 @@ ALTER TABLE delivery_feedbacks_received
 
 ALTER TABLE Has
 	ADD CONSTRAINT FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    ADD FOREIGN KEY (menu_item_id) REFERENCES Menu_item(menu_item_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+;
+
+-- Made_with
+
+ALTER TABLE Made_with
+	ADD CONSTRAINT FOREIGN KEY (tool_name) REFERENCES Tool(tool_name)
     ON UPDATE CASCADE
     ON DELETE CASCADE,
     ADD FOREIGN KEY (menu_item_id) REFERENCES Menu_item(menu_item_id)

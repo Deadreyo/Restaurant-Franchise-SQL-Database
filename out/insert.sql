@@ -762,6 +762,11 @@ VALUES
   ("112785327",5);
 
 
+-- Cooks
+
+INSERT INTO ...
+;
+
 -- cuisines
 
 INSERT INTO cuisines(`employee_ssn`,`cuisine`)
@@ -830,6 +835,46 @@ INSERT INTO Has VALUES
     (8, 4, 2, NULL),
     (8, 3, 3, NULL)
 ;
+
+-- Made_with
+
+INSERT INTO Made_with (tool_name, menu_item_id) VALUES 
+    ('Stove', 4),
+    ('Oven', 5),
+    ('Microwave', 7),
+    ('Refrigerator', 2),
+    ('Dishwasher', 8),
+    ('Knife', 4),
+    ('Frying pan', 4),
+    ('Cutting board', 4),
+    ('Blender', 10),
+    ('Toaster', 6),
+    ('Coffee maker', 12),
+    ('Grill', 11),
+    ('Waffle maker', 9),
+    ('Rice cooker', 21),
+    ('Pressure cooker', 19),
+    ('Juicer', 15),
+    ('Ice cream maker', 20),
+    ('Bread maker', 14),
+    ('Electric kettle', 30),
+    ('Knife', 29),
+    ('Cutting board', 29),
+    ('Frying pan', 23),
+    ('Knife', 23),
+    ('Cutting board', 23),
+    ('Frying pan', 24),
+    ('Knife', 24),
+    ('Cutting board', 24),
+    ('Microwave', 25),
+    ('Knife', 25),
+    ('Frying pan', 25),
+    ('Cutting board', 25),
+    ('Microwave', 28),
+    ('Knife', 28),
+    ('Frying pan', 28),
+    ('Cutting board', 28);
+
 
 -- Sells
 

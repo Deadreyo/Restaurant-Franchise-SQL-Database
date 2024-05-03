@@ -90,6 +90,11 @@ FROM Transactions
 WHERE feedback < 3
 GROUP BY employee_ssn;
 
+-- Cooks
+
+SELECT ...
+;
+
 -- Stores
 
 SELECT branch_name, ingredient_name From stores WHERE available_quantity < 20;

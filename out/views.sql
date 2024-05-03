@@ -46,6 +46,12 @@ CREATE VIEW Transaction_view AS
     FROM Transaction, Orders, Customer
     WHERE Transaction.order_id = Orders.order_id AND Orders.customer_phone = Customer.customer_phone;
 
+-- Cooks
+
+CREATE VIEW ... AS
+SELECT ...
+;
+
 -- Has
 
 CREATE VIEW Orders_has_items AS
@@ -59,6 +65,15 @@ SELECT order_id, SUM(price * quantity) as total_cost
 FROM Has, Menu_item
 WHERE Has.menu_item_id = Menu_item.menu_item_id
 GROUP BY order_id
+;
+
+-- Made_with
+
+CREATE VIEW Tools_used_in_items AS
+SELECT Menu_item.name as menu_item, GROUP_CONCAT(tool_name) as tools_used
+FROM Made_with, Menu_item
+WHERE Made_with.menu_item_id = Menu_item.menu_item_id
+GROUP BY Menu_item.menu_item_id
 ;
 
 -- Stores

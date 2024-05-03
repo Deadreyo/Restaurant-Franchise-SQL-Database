@@ -217,6 +217,14 @@ CREATE TABLE Contains(
     PRIMARY KEY(ingredient_name, menu_item_id)
 );
 
+-- Cooks
+
+CREATE TABLE Cooks (
+    employee_ssn CHAR(9),
+    order_id INT,
+    PRIMARY KEY (employee_ssn, order_id)
+);
+
 -- cuisines
 
 CREATE TABLE cuisines (
@@ -244,6 +252,14 @@ CREATE TABLE Has (
     quantity TINYINT NOT NULL,
     notes TEXT,
     PRIMARY KEY (order_id, menu_item_id)
+);
+
+-- Made_with
+
+CREATE TABLE Made_with (
+    tool_name VARCHAR(20),
+    menu_item_id INT,
+    PRIMARY KEY (tool_name, menu_item_id)
 );
 
 -- Sells
