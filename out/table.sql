@@ -27,6 +27,19 @@ CREATE TABLE customer(
     PRIMARY KEY(phone)
 );
 
+-- Delivery
+
+CREATE TABLE Delivery(
+    order_id INT,
+    statuss ENUM('Pending', 'On the Way', 'Delivered') NOT NULL,
+    delivery_fee FLOAT NOT NULL,
+    feedback SMALLINT CHECK
+        (feedback >= 0 AND feedback <= 5),
+    address VARCHAR(250) NOT NULL,
+    date_and_time DATETIME,
+    PRIMARY KEY(order_id)
+);
+
 -- delivery_guy
 
 CREATE TABLE delivery_guy (
@@ -37,20 +50,29 @@ CREATE TABLE delivery_guy (
     PRIMARY KEY (employee_ssn)
 );
 
+-- Discounts
+
+CREATE TABLE Discounts(
+    menu_item_id INT NOT NULL,
+    offer_id INT NOT NULL,
+    PRIMARY KEY(menu_item_id, offer_id)
+);
+
 -- employee
 
-CREATE TABLE employee (
-  first_name VARCHAR(15) NOT NULL, 
-  last_name VARCHAR(15) NOT NULL, 
-  employee_ssn CHAR(9), 
-  date_of_birth DATE NOT NULL, 
-  age SMALLINT NOT NULL, 
-  salary INTEGER NOT NULL, 
-  hiring_date DATE NOT NULL, 
-  experience_years SMALLINT, 
-  role VARCHAR(15) NOT NULL, 
-  branch_name VARCHAR(20) NOT NULL, 
-  PRIMARY KEY (employee_ssn)
+CREATE TABLE employee(
+    first_name VARCHAR(15) NOT NULL,
+    last_name VARCHAR(15) NOT NULL,
+    employee_ssn CHAR(9),
+    date_of_birth DATE NOT NULL,
+    age SMALLINT NOT NULL,
+    age SMALLINT NOT NULL,
+    salary INTEGER NOT NULL,
+    hiring_date DATE NOT NULL,
+    experience_years SMALLINT,
+    role VARCHAR(15) NOT NULL,
+    branch_name VARCHAR(20) NOT NULL,
+    PRIMARY KEY(employee_ssn)
 );
 
 -- manager
@@ -73,6 +95,44 @@ CREATE TABLE Menu_item(
     PRIMARY KEY(menu_item_id)
 );
 
+-- Offer
+
+CREATE TABLE Offer(
+    offer_id INT,
+    type ENUM(
+        'Coupon',
+        'Discount',
+        'Seasonal Deal',
+        'Combo'
+    ) NOT NULL,
+    discount_percentage FLOAT NOT NULL,
+    description VARCHAR(250) NOT NULL,
+    coupon_code VARCHAR(15) UNIQUE,
+    conditions TEXT,
+    start_time TIMESTAMP NOT NULL,
+    end_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP CHECK
+        (start_time < end_time),
+        PRIMARY KEY(offer_id)
+);
+
+-- Orders
+
+CREATE TABLE Orders(
+    order_id INT AUTO_INCREMENT,
+    date_and_time DATETIME NOT NULL,
+    total_amount FLOAT NOT NULL,
+    general_notes TEXT,
+    statuss ENUM(
+        'Pending',
+        'Completed',
+        'On the Way',
+        'Received',
+        'Cancelled'
+    ) NOT NULL,
+    is_takeaway BOOLEAN NOT NULL,
+    PRIMARY KEY(order_id)
+);
+
 -- Transaction
 
 CREATE TABLE Transaction (
@@ -90,5 +150,46 @@ CREATE TABLE Transaction (
         ),
     amount_with_discount FLOAT,
     PRIMARY KEY(order_id)
+);
+
+-- Applies_on
+
+CREATE TABLE Applies_on(
+    order_id INT NOT NULL,
+    offer_id INT NOT NULL,
+    PRIMARY KEY(order_id, offer_id)
+);
+
+-- cashier_feedbacks_received
+
+CREATE TABLE cashier_feedbacks_received (
+    employee_ssn CHAR(9),
+    feedback SMALLINT,
+    PRIMARY KEY (employee_ssn,feedback)
+);
+
+-- cuisines
+
+CREATE TABLE cuisines (
+    employee_ssn CHAR(9),
+    cuisine VARCHAR(20),
+    PRIMARY KEY (employee_ssn,cuisine)
+);
+
+-- delivery_feedbacks_received
+
+CREATE TABLE delivery_feedbacks_received (
+    employee_ssn CHAR(9),
+    feedback SMALLINT,
+    PRIMARY KEY (employee_ssn,feedback)
+);
+
+-- Stores
+
+CREATE TABLE Stores(
+    branch_name VARCHAR(50) NOT NULL,
+    ingredient_name VARCHAR(50) NOT NULL,
+    available_quantity FLOAT NOT NULL,
+    PRIMARY KEY(branch_name, ingredient_name)
 );
 
