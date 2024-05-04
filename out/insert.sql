@@ -701,6 +701,85 @@ VALUES(
     "On the way",
     "0"
 );
+INSERT INTO `myTable`(
+    `order_id`,
+    `date_and_time`,
+    `total_amount`,
+    `general_notes`,
+    `statuss`,
+    `is_takeaway`
+)
+VALUES(
+    11,
+    "2023-05-06 13:48:18",
+    401,
+    "enim. Etiam gravida molestie arcu. Sed eu nibh vulputate mauris",
+    "Cancelled",
+    "0"
+),(
+    12,
+    "2025-01-20 16:10:30",
+    564,
+    "euismod ac, fermentum vel, mauris. Integer sem elit, pharetra ut,",
+    "On the way",
+    "0"
+),(
+    13,
+    "2024-08-15 14:25:58",
+    563,
+    "mauris sagittis placerat. Cras dictum ultricies ligula. Nullam enim. Sed",
+    "Received",
+    "0"
+),(
+    14,
+    "2024-05-12 01:44:19",
+    811,
+    "fames ac turpis egestas. Aliquam fringilla cursus purus. Nullam scelerisque",
+    "Pending",
+    "0"
+),(
+    15,
+    "2025-01-31 22:45:51",
+    260,
+    "Fusce aliquam, enim nec tempus scelerisque, lorem ipsum sodales purus,",
+    "Cancelled",
+    "1"
+),(
+    16,
+    "2024-12-22 05:07:37",
+    833,
+    "ante dictum cursus. Nunc mauris elit, dictum eu, eleifend nec,",
+    "Completed",
+    "1"
+),(
+    17,
+    "2024-07-22 00:03:59",
+    110,
+    "risus. Donec nibh enim, gravida sit amet, dapibus id, blandit",
+    "On the way",
+    "0"
+),(
+    18,
+    "2024-10-16 04:40:20",
+    963,
+    "aliquet odio. Etiam ligula tortor, dictum eu, placerat eget, venenatis",
+    "Cancelled",
+    "0"
+),(
+    19,
+    "2025-02-15 17:01:32",
+    563,
+    "sed, est. Nunc laoreet lectus quis massa. Mauris vestibulum, neque",
+    "On the way",
+    "1"
+),(
+    20,
+    "2024-01-23 01:02:58",
+    729,
+    "at pretium aliquet, metus urna convallis erat, eget tincidunt dui",
+    "On the way",
+    "0"
+);
 
 -- reservation
 
@@ -996,8 +1075,6 @@ INSERT INTO Made_with (tool_name, menu_item_id) VALUES
 
 INSERT INTO ...
 ;
-
--- reserved
 
 INSERT INTO Reserved(
     order_id,

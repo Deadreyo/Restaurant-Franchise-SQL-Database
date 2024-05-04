@@ -1,9 +1,7 @@
 SELECT
     s.supplier_name,
     s.location,
-    i.ingredient_name,
-    i.total_quantity,
-    a.price
+    i.ingredient_name
 FROM
     ingredient AS i
 JOIN sells AS a
