@@ -3,10 +3,10 @@ SELECT
     s.location,
     i.ingredient_name
 FROM
-    ingredient AS i
-JOIN sells AS a
+    Ingredient AS i
+JOIN Sells AS a
 ON
     i.ingredient_name = a.ingredient_name
-JOIN supplier AS s
+JOIN Supplier AS s
 ON
     s.supplier_name = a.supplier_name;

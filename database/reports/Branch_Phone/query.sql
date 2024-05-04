@@ -1,6 +1,6 @@
 -- View branches address and telephone
 CREATE VIEW Branch_Phone AS SELECT
-    address,
+    branch_address,
     telephone
 FROM
     Branch;
