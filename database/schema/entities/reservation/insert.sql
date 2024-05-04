@@ -1,4 +1,4 @@
-INSERT INTO reservation(
+INSERT INTO Reservation(
     order_id,
     number_of_guests,
     date_and_time

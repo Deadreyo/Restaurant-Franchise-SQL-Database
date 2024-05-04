@@ -1,4 +1,4 @@
-INSERT INTO branch(branch_name, branch_address)
+INSERT INTO Branch(branch_name, branch_address)
 VALUES(
     'Main Branch',
     '123 Main Street, New York'

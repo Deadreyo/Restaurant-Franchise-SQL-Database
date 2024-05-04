@@ -1,4 +1,4 @@
-CREATE TABLE reserved(
+CREATE TABLE Reserved(
     order_id INTEGER,
     table_no INTEGER,
     branch_name VARCHAR(20),

@@ -1,6 +1,6 @@
 SELECT
     *
 FROM
-    branch
+    Branch
 WHERE
     1

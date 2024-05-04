@@ -1,4 +1,4 @@
-INSERT INTO reserved(
+INSERT INTO Reserved(
     order_id,
     table_no,
     branch_name
