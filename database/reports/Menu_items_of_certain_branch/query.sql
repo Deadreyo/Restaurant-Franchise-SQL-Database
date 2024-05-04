@@ -1,9 +1,6 @@
--- Write the actual logic of the query here
-
-SELECT Menu_item.name, Menu_item.size
-FROM Menu_item
-WHERE Menu_item.menu_item_id IN (
-    SELECT menu_item_id
-    FROM Available_in
-    WHERE branch_name = "nasr city"
-)
+CREATE VIEW menu_of_branch AS
+SELECT menu_item.name, menu_item.price
+FROM menu_item
+JOIN available_in ON available_in.menu_item_id = menu_item.menu_item_id
+JOIN branch ON branch.branch_name = available_in.branch_name
+WHERE branch.branch_name = "abdo basha"
