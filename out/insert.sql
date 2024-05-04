@@ -1,3 +1,17 @@
+-- branch
+
+INSERT INTO Branch(branch_name, branch_address)
+VALUES(
+    'Main Branch',
+    '123 Main Street, New York'
+),(
+    'Downtown Branch',
+    '456 Downtown Avenue, Los Angeles'
+),(
+    'City Center Branch',
+    '789 City Center Road, London'
+);
+
 -- cashier
 
 INSERT INTO cashier (`employee_ssn`,`transaction_count`)
@@ -688,6 +702,24 @@ VALUES(
     "0"
 );
 
+-- reservation
+
+INSERT INTO Reservation(
+    order_id,
+    number_of_guests,
+    date_and_time
+)
+VALUES(1, 4, '2024-05-05 18:30:00'),(2, 2, '2024-05-06 19:00:00'),(3, 6, '2024-05-07 20:15:00'),(4, 3, '2024-05-08 17:45:00');
+
+-- R_tables
+
+INSERT INTO R_tables(
+    branch_name,
+    table_no,
+    capacity
+)
+VALUES('Main Branch', 1, 4),('Main Branch', 2, 6),('Downtown Branch', 1, 2),('Downtown Branch', 2, 4),('Downtown Branch', 3, 8),('City Center Branch', 1, 6),('City Center Branch', 2, 4);
+
 -- Shipment
 
 
@@ -779,6 +811,11 @@ VALUES
 
 INSERT INTO `Applies_on`(`order_id`, `offer_id`)
 VALUES(1, 2),(1, 3),(1, 4),(2, 5),(2, 6),(2, 7),(3, 8),(3, 9),(3, 10),(4, 11),(4, 12),(4, 14),(6, 10),(6, 11),(6, 12),(7, 18),(8, 20),(9, 20),(5, 9),(10, 6);
+
+-- branch_telephone
+
+INSERT INTO Branch_telephone(branch_name, telephone)
+VALUES('Main Branch', '1234567890'),('Main Branch', '9876543210'),('Downtown Branch', '5555555555'),('City Center Branch', '9999999999');
 
 -- Can_use
 
@@ -954,6 +991,20 @@ INSERT INTO Made_with (tool_name, menu_item_id) VALUES
     ('Frying pan', 28),
     ('Cutting board', 28);
 
+
+-- Makes
+
+INSERT INTO ...
+;
+
+-- reserved
+
+INSERT INTO Reserved(
+    order_id,
+    table_no,
+    branch_name
+)
+VALUES(1, 1, 'Main Branch'),(2, 2, 'Main Branch'),(3, 1, 'Downtown Branch'),(4, 2, 'Downtown Branch'),(5, 1, 'City Center Branch'),(6, 2, 'City Center Branch');
 
 -- Sells
 

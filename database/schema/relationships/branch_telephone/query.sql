@@ -2,6 +2,6 @@ SELECT
     branch_name,
     COUNT(*)
 FROM
-    branch_telephone
+    Branch_telephone
 GROUP BY
     branch_name;
