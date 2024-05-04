@@ -10,16 +10,61 @@ VALUES(
 ),(
     'City Center Branch',
     '789 City Center Road, London'
-),
-('Sahel','in front of marina 5'),
-('Abbasseya','abbasseya square'),
-('Fifth settlement','90 road'),
-('First settlement','point 90 mall second floor'),
-('City stars','3rd floor foodcourt'),
-('Abdo basha','infront of faculty of Engineering')
-,('Nasr city','family garden')
-,('Heliopolis','94 hegaz street')
-;
+),(
+    'Westside Branch',
+    '321 Westside Lane, Chicago'
+),(
+    'Southside Branch',
+    '654 Southside Boulevard, Miami'
+),(
+    'Uptown Branch',
+    '987 Uptown Drive, San Francisco'
+),(
+    'Midtown Branch',
+    '246 Midtown Avenue, Houston'
+),(
+    'Northside Branch',
+    '579 Northside Road, Toronto'
+),(
+    'East End Branch',
+    '135 East End Lane, Sydney'
+),(
+    'Central Branch',
+    '864 Central Street, Tokyo'
+),(
+    'Oceanfront Branch',
+    '297 Oceanfront Drive, Miami'
+),(
+    'Hilltop Branch',
+    '630 Hilltop Avenue, San Francisco'
+),(
+    'Riverside Branch',
+    '963 Riverside Road, London'
+),(
+    'Parkside Branch',
+    '312 Parkside Lane, Paris'
+),(
+    'Harbor Branch',
+    '759 Harbor Avenue, Sydney'
+),(
+    'Mountain View Branch',
+    '594 Mountain View Road, Vancouver'
+),(
+    'Lakefront Branch',
+    '927 Lakefront Street, Chicago'
+),(
+    'Sunset Branch',
+    '468 Sunset Boulevard, Los Angeles'
+),(
+    'Rainbow Branch',
+    '791 Rainbow Lane, New York'
+),(
+    'Valley Branch',
+    '234 Valley Road, San Francisco'
+),(
+    'Greenfield Branch',
+    '567 Greenfield Avenue, Tokyo'
+);
 
 -- cashier
 
@@ -46,7 +91,7 @@ VALUES
 
 -- customer
 
-INSERT INTO Customer (`first_name`,`last_name`,`city`,`street`,`building_number`,`apartment_number`,`phone`)
+INSERT INTO Customer (`first_name`,`last_name`,`city`,`street`,`building_number`,`apartment_number`,`customer_phone`)
 VALUES
   ("hussein","abdallah","madinaty","sheikh ali mahmoud",118,51,"+20 104 386 4767"),
   ("hajar","hussein","fifth settlement","shams el din",62,3,"+20 108 388 1772"),
@@ -58,7 +103,7 @@ VALUES
   ("walid","nour","rehab","hegaz",93,46,"+20 108 765 2130"),
   ("merna","gamal","nasr city","abdelhameed badawi",189,107,"+20 113 865 2812"),
   ("nour","mohsen","nasr city","hegaz",96,117,"+20 102 886 3371");
-INSERT INTO Customer (`first_name`,`last_name`,`city`,`street`,`building_number`,`apartment_number`,`phone`)
+INSERT INTO Customer (`first_name`,`last_name`,`city`,`street`,`building_number`,`apartment_number`,`customer_phone`)
 VALUES
   ("omar","nour","rehab","ammar ibn yasser",223,70,"+20 128 553 6815"),
   ("gamal","ibrahim","nasr city","shams el din",251,67,"+20 122 268 1884"),
@@ -74,177 +119,29 @@ VALUES
 
 -- Delivery
 
+INSERT INTO Delivery (order_id, statuss, delivery_fee, employee_ssn, feedback, address, date_and_time)
+VALUES
+  (1, 'Pending', 10.50, '268823444', 4, '123 Main St, City', '2024-05-04 10:00:00'),
+  (2, 'On the Way', 8.75, '909557231', 3, '456 Elm St, Town', '2024-05-04 11:30:00'),
+  (3, 'Delivered', 15.25, '058026787', 5, '789 Oak St, Village', '2024-05-04 13:45:00'),
+  (4, 'Pending', 12.00, '833681284', 4, '321 Pine St, Hamlet', '2024-05-04 09:15:00'),
+  (5, 'On the Way', 9.99, '679658701', 3, '654 Maple St, City', '2024-05-04 12:20:00'),
+  (6, 'Delivered', 11.75, '149859020', 4, '987 Cedar St, Town', '2024-05-04 14:30:00'),
+  (7, 'Pending', 14.50, '596880713', 5, '159 Birch St, Village', '2024-05-04 08:45:00'),
+  (8, 'On the Way', 7.25, '771535616', 4, '852 Spruce St, Hamlet', '2024-05-04 10:50:00'),
+  (9, 'Delivered', 13.75, '954221751', 3, '753 Willow St, City', '2024-05-04 13:00:00'),
+  (10, 'Pending', 16.00, '586711748', 5, '357 Walnut St, Town', '2024-05-04 07:30:00'),
+  (11, 'On the Way', 9.50, '105124665', 4, '456 Oak St, Village', '2024-05-04 11:10:00'),
+  (12, 'Delivered', 10.25, '761664112', 5, '789 Maple St, Hamlet', '2024-05-04 14:15:00'),
+  (13, 'Pending', 13.75, '221456736', 3, '123 Pine St, City', '2024-05-04 09:45:00'),
+  (14, 'On the Way', 11.99, '183326415', 4, '456 Birch St, Town', '2024-05-04 12:40:00'),
+  (15, 'Delivered', 12.75, '683963463', 5, '789 Cedar St, Village', '2024-05-04 14:50:00'),
+  (16, 'Pending', 15.00, '338705751', 4, '159 Elm St, Hamlet', '2024-05-04 08:30:00'),
+  (17, 'On the Way', 8.25, '229080260', 3, '852 Oak St, City', '2024-05-04 11:00:00'),
+  (18, 'Delivered', 14.50, '112785327', 4, '753 Maple St, Town', '2024-05-04 13:30:00'),
+  (19, 'Pending', 18.00, '267181346', 5, '357 Pine St, Village', '2024-05-04 07:15:00'),
+  (20, 'On the Way', 9.75, '743032113', 4, '654 Birch St, Hamlet', '2024-05-04 10:20:00');
 
-INSERT INTO `Delivery`(
-    `order_id`,
-    `statuss`,
-    `delivery_fee`,
-    `feedback`,
-    `address`,
-    `date_and_time`,
-    `employee_ssn`
-)
-VALUES(
-    1,
-    "Vivamus nisi. Mauris nulla. Integer",
-    58,
-    5,
-    "Ap #451-4041 Vulputate Rd.",
-    "2024-11-05 07:50:55",
-    "058026787"
-),(
-    2,
-    "amet diam eu dolor egestas",
-    79,
-    4,
-    "200-7668 Quis Avenue",
-    "2024-07-18 07:38:15",
-    "058026787"
-),(
-    3,
-    "ac turpis egestas. Fusce aliquet",
-    26,
-    2,
-    "290-7995 Porta Rd.",
-    "2024-04-06 03:35:44",
-    "058026787"
-),(
-    4,
-    "Duis at lacus. Quisque purus",
-    77,
-    5,
-    "656-1981 Vel Rd.",
-    "2023-08-12 00:46:23",
-    "058026787"
-),(
-    5,
-    "purus ac tellus. Suspendisse sed",
-    48,
-    2,
-    "Ap #670-2689 Cursus Ave",
-    "2025-04-30 21:42:17",
-    "058026787"
-),(
-    6,
-    "volutpat nunc sit amet metus.",
-    9,
-    5,
-    "Ap #619-6347 Est Avenue",
-    "2023-07-28 02:04:23",
-    "058026787"
-),(
-    7,
-    "Pellentesque tincidunt tempus risus. Donec",
-    68,
-    1,
-    "622-238 Posuere Ave",
-    "2023-12-10 09:11:45",
-    "058026787"
-),(
-    8,
-    "diam dictum sapien. Aenean massa.",
-    44,
-    3,
-    "Ap #829-4073 Non, Rd.",
-    "2023-10-25 08:27:01",
-    "596880713"
-),(
-    9,
-    "nisi dictum augue malesuada malesuada.",
-    99,
-    1,
-    "P.O. Box 911, 3393 Neque Ave",
-    "2025-04-10 20:45:58",
-    "596880713"
-),(
-    10,
-    "neque tellus, imperdiet non, vestibulum",
-    8,
-    2,
-    "548 Tristique Rd.",
-    "2024-12-12 01:55:20",
-    "596880713"
-),(
-    11,
-    "scelerisque scelerisque dui. Suspendisse ac",
-    15,
-    4,
-    "8042 Orci. Road",
-    "2024-01-16 22:47:21",
-    "105124665"
-),(
-    12,
-    "faucibus ut, nulla. Cras eu",
-    52,
-    2,
-    "Ap #557-2103 Sed Rd.",
-    "2024-05-31 01:59:03",
-    "105124665"
-),(
-    13,
-    "vitae, orci. Phasellus dapibus quam",
-    25,
-    2,
-    "253-8540 Risus. St.",
-    "2024-11-15 18:04:36",
-    "105124665"
-),(
-    14,
-    "hendrerit neque. In ornare sagittis",
-    18,
-    3,
-    "7327 Est. Av.",
-    "2023-09-08 09:13:39",
-    "105124665"
-),(
-    15,
-    "vitae odio sagittis semper. Nam",
-    39,
-    4,
-    "Ap #699-1029 Tempor Rd.",
-    "2024-04-02 15:00:04",
-    "221456736"
-),(
-    16,
-    "Nam porttitor scelerisque neque. Nullam",
-    88,
-    3,
-    "434-5657 Magna St.",
-    "2024-11-25 02:18:01",
-    "221456736"
-),(
-    17,
-    "justo eu arcu. Morbi sit",
-    65,
-    4,
-    "9488 Diam. Rd.",
-    "2023-06-03 08:15:15",
-    "221456736"
-),(
-    18,
-    "at lacus. Quisque purus sapien,",
-    26,
-    1,
-    "Ap #641-5229 Sed Avenue",
-    "2024-05-20 13:51:45",
-    "229080260"
-),(
-    19,
-    "lectus sit amet luctus vulputate,",
-    75,
-    2,
-    "P.O. Box 245, 5134 Tempus St.",
-    "2024-09-10 09:54:40",
-    "229080260"
-),(
-    20,
-    "Quisque purus sapien, gravida non,",
-    82,
-    4,
-    "761-555 Eu St.",
-    "2023-05-15 03:25:53",
-    "229080260"
-);
 
 -- delivery_guy
 
@@ -253,7 +150,7 @@ VALUES
   ("058026787","bajaj boxer","28371928582194",50),
   ("596880713","vespa","30138643859743",10),
   ("105124665","suzuki","26396392859794",30),
-  ("221456736","honda","2519406932859381",90),
+  ("221456736","honda","25194069328593",90),
   ("229080260","benelli","27486938567938",10);
 
 
@@ -320,12 +217,12 @@ VALUES
 
 INSERT INTO Manager(`employee_ssn`,`sector`,`branch_name`)
 VALUES
-  ("771535616","marketing","abdo basha"),
-  ("586711748","HR","nasr city"),
-  ("761664112","quality control","abdo basha"),
-  ("683963463","financial management","city stars"),
-  ("338705751","customer service","abbasseya"),
-  ("267181346","operation management","abdo basha")
+  ("771535616","marketing","Abdo basha"),
+  ("586711748","HR","Nasr city"),
+  ("761664112","quality control","Abdo basha"),
+  ("683963463","financial management","City stars"),
+  ("338705751","customer service","Abbasseya"),
+  ("267181346","operation management","Abdo basha")
   ;
 
 -- Menu_Item
@@ -653,7 +550,7 @@ VALUES(
     "On the way",
     "1"
 );
-INSERT INTO `myTable`(
+INSERT INTO `Orders`(
     `order_id`,
     `date_and_time`,
     `total_amount`,
@@ -733,6 +630,7 @@ VALUES(
     "0"
 );
 
+
 -- reservation
 
 INSERT INTO Reservation(
@@ -740,7 +638,7 @@ INSERT INTO Reservation(
     number_of_guests,
     date_and_time
 )
-VALUES(1, 4, '2024-05-05 18:30:00'),(2, 2, '2024-05-06 19:00:00'),(3, 6, '2024-05-07 20:15:00'),(4, 3, '2024-05-08 17:45:00');
+VALUES(1, 4, '2024-05-05 18:30:00'),(2, 2, '2024-05-06 19:00:00'),(3, 6, '2024-05-07 20:15:00'),(4, 3, '2024-05-08 17:45:00'),(5, 5, '2024-05-09 12:00:00'),(6, 2, '2024-05-10 19:30:00'),(7, 8, '2024-05-11 18:00:00'),(8, 4, '2024-05-12 20:45:00'),(9, 3, '2024-05-13 19:15:00'),(10, 6, '2024-05-14 17:30:00'),(11, 2, '2024-05-15 13:00:00'),(12, 4, '2024-05-16 16:45:00'),(13, 5, '2024-05-17 18:30:00'),(14, 3, '2024-05-18 19:45:00'),(15, 6, '2024-05-19 20:00:00'),(16, 2, '2024-05-20 17:15:00'),(17, 4, '2024-05-21 18:45:00'),(18, 7, '2024-05-22 19:30:00'),(19, 3, '2024-05-23 15:00:00'),(20, 5, '2024-05-24 21:00:00');
 
 -- R_tables
 
@@ -749,34 +647,32 @@ INSERT INTO R_tables(
     table_no,
     capacity
 )
-VALUES('Main Branch', 1, 4),('Main Branch', 2, 6),('Downtown Branch', 1, 2),('Downtown Branch', 2, 4),('Downtown Branch', 3, 8),('City Center Branch', 1, 6),('City Center Branch', 2, 4);
+VALUES('Main Branch', 1, 4),('Main Branch', 2, 6),('Downtown Branch', 1, 2),('Downtown Branch', 2, 4),('Downtown Branch', 3, 8),('City Center Branch', 1, 6),('City Center Branch', 2, 4),('Westside Branch', 1, 3),('Westside Branch', 2, 5),('Westside Branch', 3, 2),('Southside Branch', 1, 6),('Southside Branch', 2, 4),('Uptown Branch', 1, 2),('Uptown Branch', 2, 4),('Uptown Branch', 3, 8),('Midtown Branch', 1, 6),('Midtown Branch', 2, 4),('Northside Branch', 1, 3),('Northside Branch', 2, 5),('Northside Branch', 3, 2);
 
 -- Shipment
 
-
-INSERT INTO shipment (shipment_id, status, supplier_name, branch_name) 
+INSERT INTO Shipment (shipment_id, status, supplier_name, branch_name) 
 VALUES 
-    (1, TRUE, 'Fresh Farms', 'Farmington'),
-    (2, FALSE, 'Organic Harvest', 'Springfield'),
-    (3, TRUE, 'Sunshine Groceries', 'Sunnyvale'),
-    (4, TRUE, 'Green Grocers', 'Garden City'),
-    (5, FALSE, 'Nature's Best', 'Bloomfield'),
-    (6, TRUE, 'Farm Fresh', 'Fertile Fields'),
-    (7, TRUE, 'Eco-Friendly Foods', 'Evergreen'),
-    (8, FALSE, 'Healthy Harvest', 'Hillside'),
-    (9, TRUE, 'Local Produce Co.', 'Lakeside'),
-    (10, TRUE, 'Global Foods Inc.', 'Globeville'),
-    (11, FALSE, 'Sustainable Supply', 'Sustained Springs'),
-    (12, TRUE, 'Sunrise Farms', 'Dawn Valley'),
-    (13, TRUE, 'Prime Provisions', 'Pristine Peak'),
-    (14, FALSE, 'Earth's Bounty', 'Eco Valley'),
-    (15, TRUE, 'Harmony Grocers', 'Haven Heights'),
-    (16, TRUE, 'Wholesome Goods', 'Waterside'),
-    (17, FALSE, 'Purity Produce', 'Pure Plains'),
-    (18, TRUE, 'Green Thumb Produce', 'Growth Grove'),
-    (19, TRUE, 'Natural Nourishment', 'Nature's Nest'),
-    (20, FALSE, 'Purely Organic', 'Organic Oasis');
-
+    (1, TRUE, 'supplier1', 'Main Branch'), 
+    (2, FALSE, 'supplier2', 'Main Branch'), 
+    (3, TRUE, 'supplier3', 'Main Branch'), 
+    (4, TRUE, 'supplier4', 'Main Branch'), 
+    (5, FALSE, 'supplier1', 'Downtown Branch'), 
+    (6, TRUE, 'supplier1', 'City Center Branch'), 
+    (7, TRUE, 'supplier1', 'Sahel'), 
+    (8, FALSE, 'supplier2', 'Downtown Branch'), 
+    (9, TRUE, 'supplier2', 'City Center Branch'), 
+    (10, TRUE, 'supplier2', 'Abbasseya'), 
+    (11, FALSE, 'supplier2', 'Fifth settlement'), 
+    (12, TRUE, 'supplier3', 'City Center Branch'), 
+    (13, TRUE, 'supplier3', 'Abbasseya'), 
+    (14, FALSE, 'supplier3', 'City stars'), 
+    (15, TRUE, 'supplier3', 'Nasr city'), 
+    (16, TRUE, 'supplier4', 'Heliopolis'), 
+    (17, FALSE, 'supplier4', 'Fifth settlement'), 
+    (18, TRUE, 'supplier4', 'Abdo basha'), 
+    (19, TRUE, 'supplier4', 'Nasr city'), 
+    (20, FALSE, 'supplier4', 'Heliopolis');
 
 -- Supplier
 
@@ -877,15 +773,9 @@ VALUES
   ("112785327",2),
   ("149859020",3),
   ("954221751",4),
-  ("183326415",3),
-  ("112785327",5),
   ("149859020",4),
   ("954221751",3),
   ("183326415",4),
-  ("112785327",2),
-  ("149859020",3),
-  ("954221751",4),
-  ("183326415",3),
   ("112785327",5);
 
 
@@ -1107,33 +997,33 @@ INSERT INTO Reserved(
     table_no,
     branch_name
 )
-VALUES(1, 1, 'Main Branch'),(2, 2, 'Main Branch'),(3, 1, 'Downtown Branch'),(4, 2, 'Downtown Branch'),(5, 1, 'City Center Branch'),(6, 2, 'City Center Branch');
+VALUES(1, 1, 'Main Branch'),(2, 2, 'Main Branch'),(3, 1, 'Downtown Branch'),(4, 2, 'Downtown Branch'),(5, 1, 'City Center Branch'),(6, 2, 'City Center Branch'),(7, 1, 'Westside Branch'),(8, 2, 'Westside Branch'),(9, 1, 'Southside Branch'),(10, 2, 'Southside Branch'),(11, 1, 'Uptown Branch'),(12, 2, 'Uptown Branch'),(13, 1, 'Midtown Branch'),(14, 2, 'Midtown Branch'),(15, 1, 'Northside Branch'),(16, 2, 'Northside Branch'),(17, 1, 'East End Branch'),(18, 2, 'East End Branch'),(19, 1, 'Central Branch'),(20, 2, 'Central Branch');
 
 -- Sells
 
--- Sample data for the Sells table
+
 INSERT INTO Sells (ingredient_name, supplier_name, price) 
 VALUES 
-    ('Tomato', 'Fresh Farms', 1.50),
-    ('Lettuce', 'Fresh Farms', 1.20),
-    ('Onion', 'Organic Harvest', 0.80),
-    ('Cucumber', 'Sunshine Groceries', 0.90),
-    ('Carrot', 'Organic Harvest', 1.10),
-    ('Spinach', 'Fresh Farms', 2.00),
-    ('Bell Pepper', 'Sunshine Groceries', 1.80),
-    ('Mushroom', 'Organic Harvest', 2.50),
-    ('Broccoli', 'Fresh Farms', 2.20),
-    ('Cauliflower', 'Sunshine Groceries', 1.75),
-    ('Potato', 'Fresh Farms', 1.00),
-    ('Sweet Potato', 'Organic Harvest', 1.30),
-    ('Zucchini', 'Sunshine Groceries', 1.60),
-    ('Eggplant', 'Fresh Farms', 1.80),
-    ('Green Beans', 'Organic Harvest', 2.00),
-    ('Celery', 'Sunshine Groceries', 1.20),
-    ('Kale', 'Fresh Farms', 2.50),
-    ('Radish', 'Organic Harvest', 1.00),
-    ('Arugula', 'Sunshine Groceries', 2.20),
-    ('Cabbage', 'Fresh Farms', 1.75);
+    ('Tomato', 'supplier1', 1.50),
+    ('Lettuce', 'supplier1', 1.20),
+    ('Onion', 'supplier1', 0.80),
+    ('Cucumber', 'supplier1', 0.90),
+    ('Carrot', 'supplier2', 1.10),
+    ('Spinach', 'supplier2', 2.00),
+    ('Bell Pepper', 'supplier2', 1.80),
+    ('Mushroom', 'supplier3', 2.50),
+    ('Broccoli', 'supplier3', 2.20),
+    ('Cauliflower', 'supplier3', 1.75),
+    ('Potato', 'supplier3', 1.00),
+    ('Sweet Potato', 'supplier4', 1.30),
+    ('Zucchini', 'supplier4', 1.60),
+    ('Eggplant', 'supplier4', 1.80),
+    ('Green Beans', 'supplier4', 2.00),
+    ('Celery', 'supplier5', 1.20),
+    ('Kale', 'supplier6', 2.50),
+    ('Radish', 'supplier7', 1.00),
+    ('Arugula', 'supplier7', 2.20),
+    ('Cabbage', 'supplier9', 1.75);
 
 
 -- Stores
