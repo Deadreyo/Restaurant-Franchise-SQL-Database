@@ -1,6 +1,5 @@
-CREATE TABLE reserved(
-    order_id  INTEGER ,
-    table_no INTEGER,
+CREATE TABLE available_in(
     branch_name VARCHAR(20),
-    PRIMARY KEY(branch_name, table_no,order_id)
+    menu_item_id INT NOT NULL,
+    PRIMARY KEY(branch_name, menu_item_id)
 );

@@ -1,5 +1,5 @@
-ALTER TABLE delivery_feedbacks_received
-	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES employee(employee_ssn)
-    ON UPDATE CASCADE
-    ON DELETE CASCADE
-;
+ALTER TABLE
+    available_in ADD CONSTRAINT FOREIGN KEY(branch_name) REFERENCES branch(branch_name) ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE
+    available_in ADD CONSTRAINT FOREIGN KEY(menu_item_id) REFERENCES Menu_item(menu_item_id) ON UPDATE CASCADE ON DELETE CASCADE;

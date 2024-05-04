@@ -1,6 +1,6 @@
-CREATE TABLE reserved(
-    order_id  INTEGER ,
-    table_no INTEGER,
+CREATE TABLE owns(
+    tool_name VARCHAR(20) NOT NULL,
     branch_name VARCHAR(20),
-    PRIMARY KEY(branch_name, table_no,order_id)
+    quantity TINYINT,
+    PRIMARY KEY(branch_name, tool_name)
 );
