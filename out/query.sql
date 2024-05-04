@@ -55,7 +55,7 @@ ON
 
 -- manager
 
-SELECT first_name,last_name, sector, m.branch_name FROM Manager AS m JOIN Employee AS e ON m.employee_ssn=e.employee_ssn WHERE m.branch_name="Abdo basha";
+SELECT first_name,last_name, sector, m.branch_name FROM Manager AS m JOIN Employee AS e ON m.employee_ssn=e.employee_ssn WHERE m.branch_name="Westside Branch";
 
 -- Menu_Item
 
