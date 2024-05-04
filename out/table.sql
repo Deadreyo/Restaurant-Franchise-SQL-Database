@@ -254,7 +254,7 @@ CREATE TABLE Can_use (
 
 -- cashier_feedbacks_received
 
-CREATE TABLE cashier_feedbacks_received (
+CREATE TABLE Cashier_feedbacks_received (
     employee_ssn CHAR(9),
     feedback SMALLINT CHECK
         (
@@ -282,7 +282,7 @@ CREATE TABLE Cooks (
 
 -- cuisines
 
-CREATE TABLE cuisines (
+CREATE TABLE Cuisines (
     employee_ssn CHAR(9),
     cuisine VARCHAR(20),
     PRIMARY KEY (employee_ssn,cuisine)
@@ -290,7 +290,7 @@ CREATE TABLE cuisines (
 
 -- delivery_feedbacks_received
 
-CREATE TABLE delivery_feedbacks_received (
+CREATE TABLE Delivery_feedbacks_received (
     employee_ssn CHAR(9),
     feedback SMALLINT CHECK
         (

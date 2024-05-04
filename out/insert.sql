@@ -869,7 +869,7 @@ INSERT INTO Can_use (employee_ssn, tool_name) VALUES
 
 -- cashier_feedbacks_received
 
-INSERT INTO cashier_feedbacks_received (`employee_ssn`,`feedback`)
+INSERT INTO Cashier_feedbacks_received (`employee_ssn`,`feedback`)
 VALUES
   ("149859020",1),
   ("954221751",5),
@@ -916,7 +916,7 @@ INSERT INTO Cooks (employee_ssn, order_id) VALUES
 
 -- cuisines
 
-INSERT INTO cuisines(`employee_ssn`,`cuisine`)
+INSERT INTO Cuisines(`employee_ssn`,`cuisine`)
 VALUES
   ("268823444","syrian"),
   ("909557231","western"),
@@ -929,7 +929,7 @@ VALUES
 
 -- delivery_feedbacks_received
 
-INSERT INTO delivery_feedbacks_received (`employee_ssn`,`feedback`)
+INSERT INTO Delivery_feedbacks_received (`employee_ssn`,`feedback`)
 VALUES
   ("058026787",1),
   ("596880713",5),
@@ -1064,6 +1064,41 @@ INSERT INTO Makes (branch_name, offer_id) VALUES
     ('City Center Branch', 14),
     ('City Center Branch', 18),
     ('City Center Branch', 20);
+
+-- owns
+
+INSERT INTO Owns (tool_name, branch_name, quantity) VALUES
+    ('Stove', 'Main Branch', 5),
+    ('Oven', 'Main Branch', 3),
+    ('Microwave', 'Main Branch', 2),
+    ('Refrigerator', 'Main Branch', 4),
+    ('Dishwasher', 'Main Branch', 2),
+    ('Knife', 'Main Branch', 20),
+    ('Frying pan', 'Main Branch', 15),
+    ('Cutting board', 'Main Branch', 10),
+    ('Blender', 'Main Branch', 3),
+    ('Toaster', 'Main Branch', 5),
+    ('Coffee maker', 'Main Branch', 4),
+    ('Grill', 'Main Branch', 2),
+    ('Waffle maker', 'Main Branch', 2),
+    ('Rice cooker', 'Main Branch', 3),
+    ('Pressure cooker', 'Main Branch', 3),
+    ('Juicer', 'Main Branch', 3),
+    ('Ice cream maker', 'Main Branch', 2),
+    ('Bread maker', 'Main Branch', 2),
+    ('Electric kettle', 'Main Branch', 5),
+    ('Stove', 'Downtown Branch', 4),
+    ('Oven', 'Downtown Branch', 3),
+    ('Microwave', 'Downtown Branch', 2),
+    ('Refrigerator', 'Downtown Branch', 3),
+    ('Dishwasher', 'Downtown Branch', 2),
+    ('Knife', 'Downtown Branch', 15),
+    ('Frying pan', 'Downtown Branch', 12),
+    ('Cutting board', 'Downtown Branch', 8),
+    ('Blender', 'Downtown Branch', 3),
+    ('Toaster', 'Downtown Branch', 4)
+;
+
 
 -- reserved
 
