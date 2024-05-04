@@ -1,5 +1,5 @@
 SELECT
 statuss,
 COUNT(*)
-FROM orders
+FROM Orders
 GROUP BY statuss
