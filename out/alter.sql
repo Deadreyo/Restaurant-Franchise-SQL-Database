@@ -8,7 +8,7 @@ ALTER TABLE Cashier
 
 -- chef
 
-ALTER TABLE Cuisine
+ALTER TABLE Chef
 	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES Employee(employee_ssn)
     ON UPDATE CASCADE
     ON DELETE CASCADE
@@ -23,7 +23,7 @@ ALTER TABLE
 
 -- delivery_guy
 
-ALTER TABLE Delivery_feedbacks_received
+ALTER TABLE Delivery_guy
 	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES Employee(employee_ssn)
     ON UPDATE CASCADE
     ON DELETE CASCADE
@@ -170,6 +170,7 @@ ALTER TABLE Cuisines
     ON UPDATE CASCADE
     ON DELETE CASCADE
 ;
+
 
 -- delivery_feedbacks_received
 
