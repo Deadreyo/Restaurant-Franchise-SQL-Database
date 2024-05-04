@@ -1,4 +1,4 @@
-CREATE TABLE cashier_feedbacks_received (
+CREATE TABLE Cashier_feedbacks_received (
     employee_ssn CHAR(9),
     feedback SMALLINT CHECK
         (

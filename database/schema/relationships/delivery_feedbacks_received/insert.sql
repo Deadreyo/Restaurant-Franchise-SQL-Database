@@ -1,4 +1,4 @@
-INSERT INTO delivery_feedbacks_received (`employee_ssn`,`feedback`)
+INSERT INTO Delivery_feedbacks_received (`employee_ssn`,`feedback`)
 VALUES
   ("058026787",1),
   ("596880713",5),

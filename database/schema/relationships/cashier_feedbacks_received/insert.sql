@@ -1,4 +1,4 @@
-INSERT INTO cashier_feedbacks_received (`employee_ssn`,`feedback`)
+INSERT INTO Cashier_feedbacks_received (`employee_ssn`,`feedback`)
 VALUES
   ("149859020",1),
   ("954221751",5),
