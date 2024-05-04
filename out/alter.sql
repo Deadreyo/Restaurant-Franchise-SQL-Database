@@ -18,8 +18,8 @@ ALTER TABLE cuisine
 
 ALTER TABLE
     Delivery ADD CONSTRAINT FOREIGN KEY(order_id) REFERENCES Orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    ADD COLUMN employee_ssn VARCHAR(9),
     ADD CONSTRAINT FOREIGN KEY(employee_ssn) REFERENCES Delivery_guy(employee_ssn) ON UPDATE CASCADE ON DELETE CASCADE;
+
 
 -- delivery_guy
 
@@ -59,10 +59,10 @@ ALTER TABLE manager
 -- Orders
 
 ALTER TABLE
-    Orders ADD COLUMN customer_phone CHAR(12),
-    ADD COLUMN branch_name VARCHAR(20),
+    Orders
     ADD CONSTRAINT  FOREIGN KEY(customer_phone) REFERENCES Customer(customer_phone) ON UPDATE CASCADE ON DELETE CASCADE,
     ADD CONSTRAINT FOREIGN KEY(branch_name) REFERENCES Branch(branch_name) ON UPDATE CASCADE ON DELETE CASCADE;
+
 
 -- reservation
 

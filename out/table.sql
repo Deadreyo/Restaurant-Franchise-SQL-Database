@@ -41,12 +41,14 @@ CREATE TABLE Delivery(
     order_id INT,
     statuss ENUM('Pending', 'On the Way', 'Delivered') NOT NULL,
     delivery_fee FLOAT NOT NULL,
+    employee_ssn VARCHAR(9),
     feedback SMALLINT CHECK
         (feedback >= 0 AND feedback <= 5),
     address VARCHAR(250) NOT NULL,
     date_and_time DATETIME,
     PRIMARY KEY(order_id)
 );
+
 
 -- delivery_guy
 
@@ -137,6 +139,8 @@ CREATE TABLE Orders(
     date_and_time DATETIME NOT NULL,
     total_amount FLOAT NOT NULL,
     general_notes TEXT,
+    customer_phone CHAR(12),
+    branch_name VARCHAR(20),
     statuss ENUM(
         'Pending',
         'Completed',
@@ -147,6 +151,7 @@ CREATE TABLE Orders(
     is_takeaway BOOLEAN NOT NULL,
     PRIMARY KEY(order_id)
 );
+
 
 -- reservation
 
@@ -170,7 +175,7 @@ CREATE TABLE R_tables(
 
 CREATE TABLE Shipment(
     shipment_id INT,
-    date_and_time DATE DEFAULT CURRENT_DATE,
+    date_and_time DATE,
     STATUS VARCHAR(10) NOT NULL,
     supplier_name VARCHAR(10),
     branch_name VARCHAR(20),
