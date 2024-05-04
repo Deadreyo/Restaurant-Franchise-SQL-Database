@@ -139,7 +139,7 @@ CREATE TABLE Orders(
     date_and_time DATETIME NOT NULL,
     total_amount FLOAT NOT NULL,
     general_notes TEXT,
-    customer_phone CHAR(12),
+    customer_phone CHAR(16),
     branch_name VARCHAR(20),
     statuss ENUM(
         'Pending',
