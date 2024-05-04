@@ -1,0 +1,2 @@
+ALTER TABLE
+    Branch_telephone ADD CONSTRAINT FOREIGN KEY(branch_name) REFERENCES Branch(branch_name) ON UPDATE CASCADE ON DELETE CASCADE;

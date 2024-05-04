@@ -1,3 +1,12 @@
+-- branch
+
+SELECT
+    *
+FROM
+    Branch
+WHERE
+    1
+
 -- chef
 
 SELECT SUM(orders_count) AS total_order_counts FROM chef;
@@ -76,6 +85,23 @@ SELECT
 FROM
     `Orders`;
 
+-- reservation
+
+SELECT
+    MAX(number_of_guests)
+FROM
+    Reservation;
+
+-- R_tables
+
+SELECT
+    branch_name,
+    COUNT(*)
+FROM
+    R_tables
+GROUP BY
+    branch_name;
+
 -- Tool
 
 SELECT *
@@ -89,6 +115,16 @@ SELECT employee_ssn, COUNT(*) as num_of_bad_transactions
 FROM Transactions
 WHERE feedback < 3
 GROUP BY employee_ssn;
+
+-- branch_telephone
+
+SELECT
+    branch_name,
+    COUNT(*)
+FROM
+    Branch_telephone
+GROUP BY
+    branch_name;
 
 -- Cooks
 

@@ -1,3 +1,11 @@
+-- branch
+
+CREATE TABLE Branch(
+    branch_name VARCHAR(20),
+    branch_address VARCHAR(200),
+    PRIMARY KEY(branch_name)
+);
+
 -- cashier
 
 CREATE TABLE cashier (
@@ -140,6 +148,24 @@ CREATE TABLE Orders(
     PRIMARY KEY(order_id)
 );
 
+-- reservation
+
+CREATE TABLE Reservation(
+    order_id INT,
+    number_of_guests INT NOT NULL,
+    date_and_time DATETIME NOT NULL,
+    PRIMARY KEY(order_id)
+);
+
+-- R_tables
+
+CREATE TABLE R_tables(
+    branch_name VARCHAR(20),
+    table_no INT NOT NULL,
+    capacity INT,
+    PRIMARY KEY(branch_name, table_no)
+);
+
 -- Shipment
 
 CREATE TABLE Shipment(
@@ -195,6 +221,22 @@ CREATE TABLE Applies_on(
     order_id INT NOT NULL,
     offer_id INT NOT NULL,
     PRIMARY KEY(order_id, offer_id)
+);
+
+-- available_in
+
+CREATE TABLE Available_in(
+    branch_name VARCHAR(20),
+    menu_item_id INT NOT NULL,
+    PRIMARY KEY(branch_name, menu_item_id)
+);
+
+-- branch_telephone
+
+CREATE TABLE Branch_telephone(
+    branch_name VARCHAR(20),
+    telephone CHAR(11) NOT NULL,
+    PRIMARY KEY(branch_name, telephone)
 );
 
 -- Can_use
@@ -276,6 +318,28 @@ CREATE TABLE Makes (
     branch_name VARCHAR(20),
     offer_id INT,
     PRIMARY KEY (branch_name, offer_id)
+);
+
+-- owns
+
+CREATE TABLE Owns(
+    tool_name VARCHAR(20) NOT NULL,
+    branch_name VARCHAR(20),
+    quantity TINYINT,
+    PRIMARY KEY(branch_name, tool_name)
+);
+
+-- reserved
+
+CREATE TABLE Reserved(
+    order_id INTEGER,
+    table_no INTEGER,
+    branch_name VARCHAR(20),
+    PRIMARY KEY(
+        branch_name,
+        table_no,
+        order_id
+    )
 );
 
 -- Sells
