@@ -121,26 +121,26 @@ VALUES
 
 INSERT INTO Delivery (order_id, statuss, delivery_fee, employee_ssn, feedback, address, date_and_time)
 VALUES
-  (1, 'Pending', 10.50, '268823444', 4, '123 Main St, City', '2024-05-04 10:00:00'),
-  (2, 'On the Way', 8.75, '909557231', 3, '456 Elm St, Town', '2024-05-04 11:30:00'),
-  (3, 'Delivered', 15.25, '058026787', 5, '789 Oak St, Village', '2024-05-04 13:45:00'),
-  (4, 'Pending', 12.00, '833681284', 4, '321 Pine St, Hamlet', '2024-05-04 09:15:00'),
-  (5, 'On the Way', 9.99, '679658701', 3, '654 Maple St, City', '2024-05-04 12:20:00'),
-  (6, 'Delivered', 11.75, '149859020', 4, '987 Cedar St, Town', '2024-05-04 14:30:00'),
-  (7, 'Pending', 14.50, '596880713', 5, '159 Birch St, Village', '2024-05-04 08:45:00'),
-  (8, 'On the Way', 7.25, '771535616', 4, '852 Spruce St, Hamlet', '2024-05-04 10:50:00'),
-  (9, 'Delivered', 13.75, '954221751', 3, '753 Willow St, City', '2024-05-04 13:00:00'),
-  (10, 'Pending', 16.00, '586711748', 5, '357 Walnut St, Town', '2024-05-04 07:30:00'),
+  (1, 'Pending', 10.50, '058026787', 4, '123 Main St, City', '2024-05-04 10:00:00'),
+  (2, 'On the Way', 8.75, '596880713', 3, '456 Elm St, Town', '2024-05-04 11:30:00'),
+  (3, 'Delivered', 15.25, '105124665', 5, '789 Oak St, Village', '2024-05-04 13:45:00'),
+  (4, 'Pending', 12.00, '221456736', 4, '321 Pine St, Hamlet', '2024-05-04 09:15:00'),
+  (5, 'On the Way', 9.99, '229080260', 3, '654 Maple St, City', '2024-05-04 12:20:00'),
+  (6, 'Delivered', 11.75, '229080260', 4, '987 Cedar St, Town', '2024-05-04 14:30:00'),
+  (7, 'Pending', 14.50, '221456736', 5, '159 Birch St, Village', '2024-05-04 08:45:00'),
+  (8, 'On the Way', 7.25, '105124665', 4, '852 Spruce St, Hamlet', '2024-05-04 10:50:00'),
+  (9, 'Delivered', 13.75, '596880713', 3, '753 Willow St, City', '2024-05-04 13:00:00'),
+  (10, 'Pending', 16.00, '596880713', 5, '357 Walnut St, Town', '2024-05-04 07:30:00'),
   (11, 'On the Way', 9.50, '105124665', 4, '456 Oak St, Village', '2024-05-04 11:10:00'),
-  (12, 'Delivered', 10.25, '761664112', 5, '789 Maple St, Hamlet', '2024-05-04 14:15:00'),
+  (12, 'Delivered', 10.25, '221456736', 5, '789 Maple St, Hamlet', '2024-05-04 14:15:00'),
   (13, 'Pending', 13.75, '221456736', 3, '123 Pine St, City', '2024-05-04 09:45:00'),
-  (14, 'On the Way', 11.99, '183326415', 4, '456 Birch St, Town', '2024-05-04 12:40:00'),
-  (15, 'Delivered', 12.75, '683963463', 5, '789 Cedar St, Village', '2024-05-04 14:50:00'),
-  (16, 'Pending', 15.00, '338705751', 4, '159 Elm St, Hamlet', '2024-05-04 08:30:00'),
-  (17, 'On the Way', 8.25, '229080260', 3, '852 Oak St, City', '2024-05-04 11:00:00'),
-  (18, 'Delivered', 14.50, '112785327', 4, '753 Maple St, Town', '2024-05-04 13:30:00'),
-  (19, 'Pending', 18.00, '267181346', 5, '357 Pine St, Village', '2024-05-04 07:15:00'),
-  (20, 'On the Way', 9.75, '743032113', 4, '654 Birch St, Hamlet', '2024-05-04 10:20:00');
+  (14, 'On the Way', 11.99, '221456736', 4, '456 Birch St, Town', '2024-05-04 12:40:00'),
+  (15, 'Delivered', 12.75, '596880713', 5, '789 Cedar St, Village', '2024-05-04 14:50:00'),
+  (16, 'Pending', 15.00, '596880713', 4, '159 Elm St, Hamlet', '2024-05-04 08:30:00'),
+  (17, 'On the Way', 8.25, '105124665', 3, '852 Oak St, City', '2024-05-04 11:00:00'),
+  (18, 'Delivered', 14.50, '105124665', 4, '753 Maple St, Town', '2024-05-04 13:30:00'),
+  (19, 'Pending', 18.00, '221456736', 5, '357 Pine St, Village', '2024-05-04 07:15:00'),
+  (20, 'On the Way', 9.75, '221456736', 4, '654 Birch St, Hamlet', '2024-05-04 10:20:00');
 
 
 -- delivery_guy
@@ -161,30 +161,30 @@ VALUES(1, 2),(1, 3),(1, 4),(2, 5),(2, 6),(2, 7),(3, 8),(3, 9),(3, 10),(4, 11),(4
 
 -- employee
 
+INSERT INTO Employee (first_name, last_name, employee_ssn, date_of_birth, age, salary, hiring_date, experience_years, role, branch_name)
+VALUES
+  ("Ahmed", "Gamal", "268823444", "1971-02-03", 53, 7000, "2022-05-20", 18, "chef", "Main Branch"),
+  ("Atwa", "Omar", "909557231", "1994-02-23", 30, 7000, "2021-02-24", 29, "chef", "Downtown Branch"),
+  ("Gamal", "Ahmed", "058026787", "1994-03-09", 30, 7000, "2021-05-28", 21, "delivery_guy", "City Center Branch"),
+  ("Ibrahim", "Mohamed", "833681284", "1989-08-08", 35, 7000, "2021-03-26", 27, "chef", "Westside Branch"),
+  ("Atwa", "Mohsen", "679658701", "1989-06-02", 35, 7000, "2021-07-05", 12, "chef", "Southside Branch"),
+  ("Walid", "Abdallah", "149859020", "1970-01-02", 54, 6000, "2021-03-21", 13, "cashier", "Uptown Branch"),
+  ("Mohamed", "Gamal", "596880713", "1985-04-27", 39, 5000, "2021-05-01", 8, "delivery_guy", "Midtown Branch"),
+  ("Gamal", "Nour", "771535616", "1975-09-13", 49, 10000, "2024-08-21", 10, "manager", "Northside Branch"),
+  ("Ibrahim", "Mohsen", "954221751", "1996-03-08", 28, 5000, "2022-02-16", 2, "cashier", "East End Branch"),
+  ("Ali", "Mohsen", "586711748", "1992-04-03", 32, 20000, "2022-11-18", 26, "manager", "Central Branch");
 INSERT INTO Employee (`first_name`,`last_name`,`employee_ssn`,`date_of_birth`,`age`,`salary`,`hiring_date`,`experience_years`,`role`,`branch_name`)
 VALUES
-  ("ahmed","gamal","268823444","1971-02-03",53,"7000","2022-05-20",18,"chef","Sahel"),
-  ("atwa","omar","909557231","1994-02-23",30,"7000","2021-02-24",29,"chef","First settlement"),
-  ("gamal","ahmed","058026787","1994-03-09",30,"7000","2021-05-28",21,"delivery_guy","Abbasseya"),
-  ("ibrahim","mohamed","833681284","1989-08-08",35,"7000","2021-03-26",27,"chef","Fifth settlement"),
-  ("atwa","mohsen","679658701","1989-06-02",35,"7000","2021-07-05",12,"chef","Fifth settlement"),
-  ("walid","abdallah","149859020","1970-01-02",54,"6000","2021-03-21",13,"cashier","City stars"),
-  ("mohamed","gamal","596880713","1985-04-27",39,"5000","2021-05-01",8,"delivery_guy","Abdo basha"),
-  ("gamal","nour","771535616","1975-09-13",49,"10000","2024-08-21",10,"manager","Abdo basha"),
-  ("ibrahim","mohsen","954221751","1996-03-08",28,"5000","2022-02-16",2,"cashier","Abbasseya"),
-  ("ali","mohsen","586711748","1992-04-03",32,"20000","2022-11-18",26,"manager","Nasr city");
-INSERT INTO Employee (`first_name`,`last_name`,`employee_ssn`,`date_of_birth`,`age`,`salary`,`hiring_date`,`experience_years`,`role`,`branch_name`)
-VALUES
-  ("abdallah","mohamed","105124665","1988-05-29",36,"7000","2021-03-18",19,"delivery_guy","City stars"),
-  ("sarah","ali","761664112","1967-02-26",57,"20000","2021-06-18",3,"manager","Abdo basha"),
-  ("nour","mohsen","221456736","2000-03-12",24,"5000","2024-09-26",28,"delivery_guy","Abbasseya"),
-  ("hajar","walid","183326415","1963-05-04",61,"6000","2022-06-15",16,"cashier","First settlement"),
-  ("merna","abdallah","683963463","1998-08-04",26,"12000","2025-05-20",19,"manager","City stars"),
-  ("abdallah","gamal","338705751","1975-03-15",49,"20000","2024-01-09",5,"manager","Abbasseya"),
-  ("hussein","omar","229080260","1997-03-18",27,"5000","2023-05-09",13,"delivery_guy","Heliopolis"),
-  ("walid","mohamed","112785327","1976-02-09",48,"7000","2023-07-31",8,"cashier","Abbasseya"),
-  ("mohamed","ahmed","267181346","1969-04-30",28,"15000","2022-03-01",16,"manager","Abdo basha"),
-  ("hajar","nour","743032113","2002-04-05",22,"7000","2021-08-13",30,"chef","Heliopolis");
+  ("abdallah","mohamed","105124665","1988-05-29",36,"7000","2021-03-18",19,"delivery_guy","Downtown Branch"),
+  ("sarah","ali","761664112","1967-02-26",57,"20000","2021-06-18",3,"manager","Westside Branch"),
+  ("nour","mohsen","221456736","2000-03-12",24,"5000","2024-09-26",28,"delivery_guy","Uptown Branch"),
+  ("hajar","walid","183326415","1963-05-04",61,"6000","2022-06-15",16,"cashier","Uptown Branch"),
+  ("merna","abdallah","683963463","1998-08-04",26,"12000","2025-05-20",19,"manager","East End Branch"),
+  ("abdallah","gamal","338705751","1975-03-15",49,"20000","2024-01-09",5,"manager","East End Branch"),
+  ("hussein","omar","229080260","1997-03-18",27,"5000","2023-05-09",13,"delivery_guy","Midtown Branch"),
+  ("walid","mohamed","112785327","1976-02-09",48,"7000","2023-07-31",8,"cashier","Southside Branch"),
+  ("mohamed","ahmed","267181346","1969-04-30",28,"15000","2022-03-01",16,"manager","Westside Branch"),
+  ("hajar","nour","743032113","2002-04-05",22,"7000","2021-08-13",30,"chef","Midtown Branch");
 
 
 -- ingredient
@@ -217,12 +217,12 @@ VALUES
 
 INSERT INTO Manager(`employee_ssn`,`sector`,`branch_name`)
 VALUES
-  ("771535616","marketing","Abdo basha"),
-  ("586711748","HR","Nasr city"),
-  ("761664112","quality control","Abdo basha"),
-  ("683963463","financial management","City stars"),
-  ("338705751","customer service","Abbasseya"),
-  ("267181346","operation management","Abdo basha")
+  ("771535616","marketing","Northside Branch"),
+  ("586711748","HR","Central Branch"),
+  ("761664112","quality control","Westside Branch"),
+  ("683963463","financial management","East End Branch"),
+  ("338705751","customer service","East End Branch"),
+  ("267181346","operation management","Westside Branch")
   ;
 
 -- Menu_Item
@@ -659,20 +659,21 @@ VALUES
     (4, TRUE, 'supplier4', 'Main Branch'), 
     (5, FALSE, 'supplier1', 'Downtown Branch'), 
     (6, TRUE, 'supplier1', 'City Center Branch'), 
-    (7, TRUE, 'supplier1', 'Sahel'), 
+    (7, TRUE, 'supplier1', 'Westside Branch'), 
     (8, FALSE, 'supplier2', 'Downtown Branch'), 
     (9, TRUE, 'supplier2', 'City Center Branch'), 
-    (10, TRUE, 'supplier2', 'Abbasseya'), 
-    (11, FALSE, 'supplier2', 'Fifth settlement'), 
+    (10, TRUE, 'supplier2', 'Westside Branch'), 
+    (11, FALSE, 'supplier2', 'Southside Branch'), 
     (12, TRUE, 'supplier3', 'City Center Branch'), 
-    (13, TRUE, 'supplier3', 'Abbasseya'), 
-    (14, FALSE, 'supplier3', 'City stars'), 
-    (15, TRUE, 'supplier3', 'Nasr city'), 
+    (13, TRUE, 'supplier3', 'Uptown Branch'), 
+    (14, FALSE, 'supplier3', 'Harbor Branch'), 
+    (15, TRUE, 'supplier3', 'Valley Branch'), 
     (16, TRUE, 'supplier4', 'Heliopolis'), 
-    (17, FALSE, 'supplier4', 'Fifth settlement'), 
-    (18, TRUE, 'supplier4', 'Abdo basha'), 
-    (19, TRUE, 'supplier4', 'Nasr city'), 
-    (20, FALSE, 'supplier4', 'Heliopolis');
+    (17, FALSE, 'supplier4', 'Midtown Branch'), 
+    (18, TRUE, 'supplier4', 'Riverside Branch'), 
+    (19, TRUE, 'supplier4', 'Central Branch'), 
+    (20, FALSE, 'supplier4', 'East End Branch');
+
 
 -- Supplier
 
@@ -1028,29 +1029,68 @@ VALUES
 
 -- Stores
 
-INSERT INTO `Stores` (`branch_name`,`ingredient_name`,`available_quantity`)
-VALUES
-  ("Branch 1","Ingredient A",45),
-  ("Branch 1","Ingredient B",83),
-  ("Branch 1","Ingredient C",46),
-  ("Branch 1","Ingredient D",28),
-  ("Branch 1","Ingredient E",14),
-  ("Branch 1","Ingredient F",74),
-  ("Branch 1","Ingredient G",90),
-  ("Branch 2","Ingredient A",83),
-  ("Branch 2","Ingredient B",93),
-  ("Branch 2","Ingredient C",53),
-  ("Branch 2","Ingredient D",53),
-  ("Branch 2","Ingredient E",55),
-  ("Branch 2","Ingredient F",90),
-  ("Branch 2","Ingredient G",77),
-  ("Branch 3","Ingredient A",31),
-  ("Branch 3","Ingredient J",7),
-  ("Branch 3","Ingredient K",66),
-  ("Branch 3","Ingredient L",83),
-  ("Branch 3","Ingredient M",15),
-  ("Branch 3","Ingredient N",74);
-
+INSERT INTO Stores (branch_name, ingredient_name, available_quantity) 
+VALUES 
+    ('Main Branch', 'Tomato', 100),
+    ('Main Branch', 'Lettuce', 150),
+    ('Main Branch', 'Onion', 120),
+    ('Downtown Branch', 'Cucumber', 130),
+    ('Downtown Branch', 'Carrot', 140),
+    ('Downtown Branch', 'Spinach', 110),
+    ('City Center Branch', 'Bell Pepper', 90),
+    ('City Center Branch', 'Mushroom', 100),
+    ('City Center Branch', 'Broccoli', 120),
+    ('Westside Branch', 'Cauliflower', 100),
+    ('Westside Branch', 'Potato', 150),
+    ('Westside Branch', 'Sweet Potato', 100),
+    ('Southside Branch', 'Zucchini', 110),
+    ('Southside Branch', 'Eggplant', 120),
+    ('Southside Branch', 'Green Beans', 130),
+    ('Uptown Branch', 'Celery', 140),
+    ('Uptown Branch', 'Kale', 100),
+    ('Uptown Branch', 'Radish', 120),
+    ('Midtown Branch', 'Arugula', 100),
+    ('Midtown Branch', 'Cabbage', 110),
+    ('Northside Branch', 'Tomato', 90),
+    ('Northside Branch', 'Lettuce', 100),
+    ('Northside Branch', 'Onion', 120),
+    ('East End Branch', 'Cucumber', 110),
+    ('East End Branch', 'Carrot', 100),
+    ('East End Branch', 'Spinach', 110),
+    ('Central Branch', 'Bell Pepper', 90),
+    ('Central Branch', 'Mushroom', 100),
+    ('Central Branch', 'Broccoli', 120),
+    ('Oceanfront Branch', 'Cauliflower', 100),
+    ('Oceanfront Branch', 'Potato', 150),
+    ('Oceanfront Branch', 'Sweet Potato', 110),
+    ('Hilltop Branch', 'Zucchini', 90),
+    ('Hilltop Branch', 'Eggplant', 100),
+    ('Hilltop Branch', 'Green Beans', 130),
+    ('Riverside Branch', 'Celery', 120),
+    ('Riverside Branch', 'Kale', 110),
+    ('Riverside Branch', 'Radish', 100),
+    ('Parkside Branch', 'Arugula', 90),
+    ('Parkside Branch', 'Cabbage', 120),
+    ('Harbor Branch', 'Tomato', 90),
+    ('Harbor Branch', 'Lettuce', 100),
+    ('Harbor Branch', 'Onion', 120),
+    ('Mountain View Branch', 'Cucumber', 110),
+    ('Mountain View Branch', 'Carrot', 100),
+    ('Mountain View Branch', 'Spinach', 110),
+    ('Lakefront Branch', 'Bell Pepper', 90),
+    ('Lakefront Branch', 'Mushroom', 100),
+    ('Lakefront Branch', 'Broccoli', 120),
+    ('Sunset Branch', 'Cauliflower', 100),
+    ('Sunset Branch', 'Potato', 150),
+    ('Sunset Branch', 'Sweet Potato', 110),
+    ('Rainbow Branch', 'Zucchini', 90),
+    ('Rainbow Branch', 'Eggplant', 100),
+    ('Rainbow Branch', 'Green Beans', 130),
+    ('Valley Branch', 'Celery', 120),
+    ('Valley Branch', 'Kale', 110),
+    ('Valley Branch', 'Radish', 100),
+    ('Greenfield Branch', 'Arugula', 90),
+    ('Greenfield Branch', 'Cabbage', 120);
 
 -- Supplied_in
 
