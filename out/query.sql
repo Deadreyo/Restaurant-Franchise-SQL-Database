@@ -5,7 +5,7 @@ SELECT
 FROM
     Branch
 WHERE
-    1
+    1 ;
 
 -- chef
 
@@ -45,17 +45,17 @@ SELECT
     s.location,
     i.ingredient_name
 FROM
-    ingredient AS i
-JOIN sells AS a
+    Ingredient AS i
+JOIN Sells AS a
 ON
     i.ingredient_name = a.ingredient_name
-JOIN supplier AS s
+JOIN Supplier AS s
 ON
     s.supplier_name = a.supplier_name;
 
 -- manager
 
-SELECT first_name,last_name, sector, m.branch_name FROM Manager AS m JOIN employee AS e ON m.employee_ssn=e.employee_ssn WHERE m.branch_name="abdo basha";
+SELECT first_name,last_name, sector, m.branch_name FROM Manager AS m JOIN Employee AS e ON m.employee_ssn=e.employee_ssn WHERE m.branch_name="abdo basha";
 
 -- Menu_Item
 
