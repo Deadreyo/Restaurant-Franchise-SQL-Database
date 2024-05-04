@@ -10,4 +10,4 @@ JOIN supplier AS s
 ON
     s.supplier_name = sh.supplier_name
 WHERE
-    b.branch_name = 'branch1';
+    b.branch_name = 'Main Branch';

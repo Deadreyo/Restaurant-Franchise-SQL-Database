@@ -1,4 +1,4 @@
-INSERT INTO shipment (shipment_id, status, supplier_name, branch_name) 
+INSERT INTO Shipment (shipment_id, status, supplier_name, branch_name) 
 VALUES 
     (1, TRUE, 'supplier1', 'Main Branch'), 
     (2, FALSE, 'supplier2', 'Main Branch'), 

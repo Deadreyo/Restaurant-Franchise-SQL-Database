@@ -77,7 +77,7 @@ VALUES(
     "On the way",
     "1"
 );
-INSERT INTO `myTable`(
+INSERT INTO `Orders`(
     `order_id`,
     `date_and_time`,
     `total_amount`,
