@@ -1,4 +1,4 @@
-CREATE TABLE delivery_feedbacks_received (
+CREATE TABLE Delivery_feedbacks_received (
     employee_ssn CHAR(9),
     feedback SMALLINT CHECK
         (
