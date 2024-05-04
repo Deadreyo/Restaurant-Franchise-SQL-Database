@@ -140,5 +140,5 @@ WHERE Makes.offer_id = Offer.offer_id AND start_time < NOW() AND end_time > NOW(
 
 -- Stores
 
-SELECT branch_name, ingredient_name From stores WHERE available_quantity < 20;
+SELECT branch_name, ingredient_name From Stores WHERE available_quantity < 20;
 
