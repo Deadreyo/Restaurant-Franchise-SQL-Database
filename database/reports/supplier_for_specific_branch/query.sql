@@ -2,7 +2,7 @@ SELECT
     b.branch_name,
     s.supplier_name
 FROM
-    branch AS b
+    Branch AS b
 JOIN shipment AS sh
 ON
     b.branch_name = sh.branch_name

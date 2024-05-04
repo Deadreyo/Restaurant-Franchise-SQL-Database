@@ -4,7 +4,7 @@ ALTER TABLE Manager
     ON DELETE CASCADE
 ;
 ALTER TABLE Manager
-	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES branch(branch_name)
+	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES Branch(branch_name)
     ON UPDATE CASCADE
     ON DELETE RESTRICT
 ;

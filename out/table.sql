@@ -8,7 +8,7 @@ CREATE TABLE Branch(
 
 -- cashier
 
-CREATE TABLE cashier (
+CREATE TABLE Cashier (
     employee_ssn CHAR(9),
     transaction_count INTEGER,
     PRIMARY KEY (employee_ssn)
@@ -16,7 +16,7 @@ CREATE TABLE cashier (
 
 -- chef
 
-CREATE TABLE chef (
+CREATE TABLE Chef (
     employee_ssn CHAR(9),
     orders_count SMALLINT,
     PRIMARY KEY (employee_ssn)
@@ -24,7 +24,7 @@ CREATE TABLE chef (
 
 -- customer
 
-CREATE TABLE customer(
+CREATE TABLE Customer(
     phone CHAR(16),
     first_name VARCHAR(15) NOT NULL,
     last_name VARCHAR(15) NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE Delivery(
 
 -- delivery_guy
 
-CREATE TABLE delivery_guy (
+CREATE TABLE Delivery_guy (
     employee_ssn CHAR(9),
     bike_type VARCHAR(15) NOT NULL,
     driving_license CHAR(14) UNIQUE NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE Discounts(
 
 -- employee
 
-CREATE TABLE employee(
+CREATE TABLE Employee(
     first_name VARCHAR(15) NOT NULL,
     last_name VARCHAR(15) NOT NULL,
     employee_ssn CHAR(9),
@@ -93,7 +93,7 @@ CREATE TABLE Ingredient(
 
 -- manager
 
-CREATE TABLE manager (
+CREATE TABLE Manager (
     employee_ssn  CHAR(9),
     sector VARCHAR(20) NOT NULL,
     branch_name VARCHAR(20),

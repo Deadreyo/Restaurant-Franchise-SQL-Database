@@ -9,12 +9,12 @@ WHERE
 
 -- chef
 
-SELECT SUM(orders_count) AS total_order_counts FROM chef;
+SELECT SUM(orders_count) AS total_order_counts FROM Chef;
 
 -- customer
 
-SELECT `first_name`, `last_name`, `city` FROM `customer` WHERE city = "heliopolis";
-SELECT `phone`, `first_name`, `last_name` FROM `customer` WHERE phone LIKE "+20 10%";
+SELECT `first_name`, `last_name`, `city` FROM `Customer` WHERE city = "heliopolis";
+SELECT `phone`, `first_name`, `last_name` FROM `Customer` WHERE phone LIKE "+20 10%";
 
 -- Delivery
 
@@ -26,7 +26,7 @@ FROM
 
 -- delivery_guy
 
-SELECT `first_name`, `last_name`, `bike_type`, `driving_license`, `delivery_count` FROM delivery_guy AS d JOIN employee AS e ON d.employee_ssn = e.employee_ssn WHERE d.delivery_count > 20;
+SELECT `first_name`, `last_name`, `bike_type`, `driving_license`, `delivery_count` FROM Delivery_guy AS d JOIN employee AS e ON d.employee_ssn = e.employee_ssn WHERE d.delivery_count > 20;
 
 -- Discounts
 
@@ -55,7 +55,7 @@ ON
 
 -- manager
 
-SELECT first_name,last_name, sector, m.branch_name FROM manager AS m JOIN employee AS e ON m.employee_ssn=e.employee_ssn WHERE m.branch_name="abdo basha";
+SELECT first_name,last_name, sector, m.branch_name FROM Manager AS m JOIN employee AS e ON m.employee_ssn=e.employee_ssn WHERE m.branch_name="abdo basha";
 
 -- Menu_Item
 

@@ -1,6 +1,6 @@
 -- cashier
 
-ALTER TABLE cashier
+ALTER TABLE Cashier
 	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES employee(employee_ssn)
     ON UPDATE CASCADE
     ON DELETE CASCADE
@@ -8,7 +8,7 @@ ALTER TABLE cashier
 
 -- chef
 
-ALTER TABLE cuisine
+ALTER TABLE Cuisine
 	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES employee(employee_ssn)
     ON UPDATE CASCADE
     ON DELETE CASCADE
@@ -23,7 +23,7 @@ ALTER TABLE
 
 -- delivery_guy
 
-ALTER TABLE delivery_feedbacks_received
+ALTER TABLE Delivery_feedbacks_received
 	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES employee(employee_ssn)
     ON UPDATE CASCADE
     ON DELETE CASCADE
@@ -37,21 +37,21 @@ ALTER TABLE
 
 -- employee
 
-ALTER TABLE employee
-	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES branch(branch_name)
+ALTER TABLE Employee
+	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES Branch(branch_name)
     ON UPDATE CASCADE
     ON DELETE RESTRICT
 ;
 
 -- manager
 
-ALTER TABLE manager
+ALTER TABLE Manager
 	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES employee(employee_ssn)
     ON UPDATE CASCADE
     ON DELETE CASCADE
 ;
-ALTER TABLE manager
-	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES branch(branch_name)
+ALTER TABLE Manager
+	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES Branch(branch_name)
     ON UPDATE CASCADE
     ON DELETE RESTRICT
 ;
@@ -77,7 +77,7 @@ ALTER TABLE
 -- Shipment
 
 ALTER TABLE Shipment
-	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES branch(branch_name)
+	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES Branch(branch_name)
     ON UPDATE CASCADE
     ON DELETE RESTRICT
 ;
