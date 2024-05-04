@@ -1,4 +1,4 @@
-INSERT INTO cashier (`employee_ssn`,`transaction_count`)
+INSERT INTO Cashier (`employee_ssn`,`transaction_count`)
 VALUES
   ("149859020",300),
   ("954221751",1000),

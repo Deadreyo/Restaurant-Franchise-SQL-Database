@@ -1,4 +1,4 @@
-INSERT INTO manager(`employee_ssn`,`sector`,`branch_name`)
+INSERT INTO Manager(`employee_ssn`,`sector`,`branch_name`)
 VALUES
   ("771535616","marketing","abdo basha"),
   ("586711748","HR","nasr city"),

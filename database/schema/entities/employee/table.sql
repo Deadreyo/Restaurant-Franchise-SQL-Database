@@ -1,4 +1,4 @@
-CREATE TABLE employee(
+CREATE TABLE Employee(
     first_name VARCHAR(15) NOT NULL,
     last_name VARCHAR(15) NOT NULL,
     employee_ssn CHAR(9),

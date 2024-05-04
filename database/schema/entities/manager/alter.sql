@@ -1,9 +1,9 @@
-ALTER TABLE manager
+ALTER TABLE Manager
 	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES employee(employee_ssn)
     ON UPDATE CASCADE
     ON DELETE CASCADE
 ;
-ALTER TABLE manager
+ALTER TABLE Manager
 	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES branch(branch_name)
     ON UPDATE CASCADE
     ON DELETE RESTRICT
