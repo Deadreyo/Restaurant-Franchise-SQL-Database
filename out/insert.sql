@@ -869,7 +869,7 @@ INSERT INTO Can_use (employee_ssn, tool_name) VALUES
 
 -- cashier_feedbacks_received
 
-INSERT INTO cashier_feedbacks_received (`employee_ssn`,`feedback`)
+INSERT INTO Cashier_feedbacks_received (`employee_ssn`,`feedback`)
 VALUES
   ("149859020",1),
   ("954221751",5),
@@ -916,7 +916,7 @@ INSERT INTO Cooks (employee_ssn, order_id) VALUES
 
 -- cuisines
 
-INSERT INTO cuisines(`employee_ssn`,`cuisine`)
+INSERT INTO Cuisines(`employee_ssn`,`cuisine`)
 VALUES
   ("268823444","syrian"),
   ("909557231","western"),
@@ -929,7 +929,7 @@ VALUES
 
 -- delivery_feedbacks_received
 
-INSERT INTO delivery_feedbacks_received (`employee_ssn`,`feedback`)
+INSERT INTO Delivery_feedbacks_received (`employee_ssn`,`feedback`)
 VALUES
   ("058026787",1),
   ("596880713",5),
