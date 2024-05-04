@@ -1,4 +1,4 @@
-CREATE TABLE delivery_guy (
+CREATE TABLE Delivery_guy (
     employee_ssn CHAR(9),
     bike_type VARCHAR(15) NOT NULL,
     driving_license CHAR(14) UNIQUE NOT NULL,

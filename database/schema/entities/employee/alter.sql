@@ -1,5 +1,5 @@
-ALTER TABLE employee
-	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES branch(branch_name)
+ALTER TABLE Employee
+	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES Branch(branch_name)
     ON UPDATE CASCADE
     ON DELETE RESTRICT
 ;

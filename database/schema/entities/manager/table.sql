@@ -1,4 +1,4 @@
-CREATE TABLE manager (
+CREATE TABLE Manager (
     employee_ssn  CHAR(9),
     sector VARCHAR(20) NOT NULL,
     branch_name VARCHAR(20),

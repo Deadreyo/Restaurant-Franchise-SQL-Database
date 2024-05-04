@@ -8,7 +8,7 @@ CREATE TABLE Branch(
 
 -- cashier
 
-CREATE TABLE cashier (
+CREATE TABLE Cashier (
     employee_ssn CHAR(9),
     transaction_count INTEGER,
     PRIMARY KEY (employee_ssn)
@@ -16,7 +16,7 @@ CREATE TABLE cashier (
 
 -- chef
 
-CREATE TABLE chef (
+CREATE TABLE Chef (
     employee_ssn CHAR(9),
     orders_count SMALLINT,
     PRIMARY KEY (employee_ssn)
@@ -24,7 +24,7 @@ CREATE TABLE chef (
 
 -- customer
 
-CREATE TABLE customer(
+CREATE TABLE Customer(
     phone CHAR(16),
     first_name VARCHAR(15) NOT NULL,
     last_name VARCHAR(15) NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE Delivery(
 
 -- delivery_guy
 
-CREATE TABLE delivery_guy (
+CREATE TABLE Delivery_guy (
     employee_ssn CHAR(9),
     bike_type VARCHAR(15) NOT NULL,
     driving_license CHAR(14) UNIQUE NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE Discounts(
 
 -- employee
 
-CREATE TABLE employee(
+CREATE TABLE Employee(
     first_name VARCHAR(15) NOT NULL,
     last_name VARCHAR(15) NOT NULL,
     employee_ssn CHAR(9),
@@ -93,7 +93,7 @@ CREATE TABLE Ingredient(
 
 -- manager
 
-CREATE TABLE manager (
+CREATE TABLE Manager (
     employee_ssn  CHAR(9),
     sector VARCHAR(20) NOT NULL,
     branch_name VARCHAR(20),
@@ -186,7 +186,7 @@ CREATE TABLE Shipment(
 
 CREATE TABLE Supplier(
     supplier_name VARCHAR(10), 
-    location VARCHAR(10) NOT NULL,
+    location VARCHAR(20) NOT NULL,
     is_active BOOLEAN DEFAULT TRUE,
     telephone CHAR(11) NOT NULL,
     PRIMARY KEY (supplier_name)
@@ -254,7 +254,7 @@ CREATE TABLE Can_use (
 
 -- cashier_feedbacks_received
 
-CREATE TABLE cashier_feedbacks_received (
+CREATE TABLE Cashier_feedbacks_received (
     employee_ssn CHAR(9),
     feedback SMALLINT CHECK
         (
@@ -282,7 +282,7 @@ CREATE TABLE Cooks (
 
 -- cuisines
 
-CREATE TABLE cuisines (
+CREATE TABLE Cuisines (
     employee_ssn CHAR(9),
     cuisine VARCHAR(20),
     PRIMARY KEY (employee_ssn,cuisine)
@@ -290,7 +290,7 @@ CREATE TABLE cuisines (
 
 -- delivery_feedbacks_received
 
-CREATE TABLE delivery_feedbacks_received (
+CREATE TABLE Delivery_feedbacks_received (
     employee_ssn CHAR(9),
     feedback SMALLINT CHECK
         (

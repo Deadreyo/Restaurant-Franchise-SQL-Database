@@ -1,2 +1,2 @@
-SELECT `first_name`, `last_name`, `city` FROM `customer` WHERE city = "heliopolis";
-SELECT `phone`, `first_name`, `last_name` FROM `customer` WHERE phone LIKE "+20 10%";
+SELECT `first_name`, `last_name`, `city` FROM `Customer` WHERE city = "heliopolis";
+SELECT `phone`, `first_name`, `last_name` FROM `Customer` WHERE phone LIKE "+20 10%";

@@ -1,4 +1,4 @@
-INSERT INTO chef(`employee_ssn`,`orders_count`)
+INSERT INTO Chef(`employee_ssn`,`orders_count`)
 VALUES
   ("268823444",300),
   ("909557231",200),

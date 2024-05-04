@@ -1,5 +1,5 @@
-ALTER TABLE cashier
-	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES employee(employee_ssn)
+ALTER TABLE Cashier
+	ADD CONSTRAINT FOREIGN KEY (employee_ssn) REFERENCES Employee(employee_ssn)
     ON UPDATE CASCADE
     ON DELETE CASCADE
 ;

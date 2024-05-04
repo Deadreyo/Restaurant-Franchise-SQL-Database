@@ -1,4 +1,4 @@
-INSERT INTO delivery_guy (`employee_ssn`,`bike_type`,`driving_license`,`delivery_count`)
+INSERT INTO Delivery_guy (`employee_ssn`,`bike_type`,`driving_license`,`delivery_count`)
 VALUES
   ("058026787","bajaj boxer","28371928582194",50),
   ("596880713","vespa","30138643859743",10),

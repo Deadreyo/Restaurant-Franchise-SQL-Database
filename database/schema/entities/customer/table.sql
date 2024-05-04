@@ -1,4 +1,4 @@
-CREATE TABLE customer(
+CREATE TABLE Customer(
     phone CHAR(16),
     first_name VARCHAR(15) NOT NULL,
     last_name VARCHAR(15) NOT NULL,

@@ -1,4 +1,4 @@
-INSERT INTO cuisines(`employee_ssn`,`cuisine`)
+INSERT INTO Cuisines(`employee_ssn`,`cuisine`)
 VALUES
   ("268823444","syrian"),
   ("909557231","western"),

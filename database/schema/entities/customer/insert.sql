@@ -1,4 +1,4 @@
-INSERT INTO customer (`first_name`,`last_name`,`city`,`street`,`building_number`,`apartment_number`,`phone`)
+INSERT INTO Customer (`first_name`,`last_name`,`city`,`street`,`building_number`,`apartment_number`,`phone`)
 VALUES
   ("hussein","abdallah","madinaty","sheikh ali mahmoud",118,51,"+20 104 386 4767"),
   ("hajar","hussein","fifth settlement","shams el din",62,3,"+20 108 388 1772"),
@@ -10,7 +10,7 @@ VALUES
   ("walid","nour","rehab","hegaz",93,46,"+20 108 765 2130"),
   ("merna","gamal","nasr city","abdelhameed badawi",189,107,"+20 113 865 2812"),
   ("nour","mohsen","nasr city","hegaz",96,117,"+20 102 886 3371");
-INSERT INTO customer (`first_name`,`last_name`,`city`,`street`,`building_number`,`apartment_number`,`phone`)
+INSERT INTO Customer (`first_name`,`last_name`,`city`,`street`,`building_number`,`apartment_number`,`phone`)
 VALUES
   ("omar","nour","rehab","ammar ibn yasser",223,70,"+20 128 553 6815"),
   ("gamal","ibrahim","nasr city","shams el din",251,67,"+20 122 268 1884"),
