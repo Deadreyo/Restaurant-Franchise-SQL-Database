@@ -4,13 +4,13 @@ SELECT
     t.tool_name  
 FROM
     Orders o
-JOIN owns o1 ON
+JOIN Owns o1 ON
     o.branch_name = o1.branch_name
-JOIN tool t ON
+JOIN Tool t ON
     o1.tool_name = t.tool_name
-JOIN stores s ON
+JOIN Stores s ON
     o.branch_name = s.branch_name
-JOIN ingredient i ON
+JOIN Ingredient i ON
     s.ingredient_name = i.ingredient_name
 WHERE
     o.order_id = '1';
