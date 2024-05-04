@@ -11,7 +11,7 @@ if (!fs.existsSync(outDir)) {
   fs.mkdirSync(outDir);
 }
 
-const fileTypes = ['alter.sql', 'domains.sql', 'insert.sql', 'table.sql', 'query.sql', 'views.sql']
+const fileTypes = ['alter.sql', 'insert.sql', 'table.sql', 'query.sql', 'views.sql']
 
 for(let fileType of fileTypes) {
     const outputPath = path.join(outDir, fileType);
