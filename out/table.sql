@@ -166,7 +166,7 @@ CREATE TABLE Reservation(
 
 CREATE TABLE R_tables(
     branch_name VARCHAR(20),
-    table_no INT NOT NULL,
+    table_no INT ,
     capacity INT,
     PRIMARY KEY(branch_name, table_no)
 );
@@ -338,7 +338,7 @@ CREATE TABLE Owns(
 
 CREATE TABLE Reserved(
     order_id INTEGER,
-    table_no INTEGER,
+    table_no INT,
     branch_name VARCHAR(20),
     PRIMARY KEY(
         branch_name,
