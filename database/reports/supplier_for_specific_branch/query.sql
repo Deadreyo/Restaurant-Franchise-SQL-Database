@@ -3,10 +3,10 @@ SELECT
     s.supplier_name
 FROM
     Branch AS b
-JOIN shipment AS sh
+JOIN Shipment AS sh
 ON
     b.branch_name = sh.branch_name
-JOIN supplier AS s
+JOIN Supplier AS s
 ON
     s.supplier_name = sh.supplier_name
 WHERE
