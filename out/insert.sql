@@ -91,7 +91,7 @@ VALUES
 
 -- customer
 
-INSERT INTO Customer (`first_name`,`last_name`,`city`,`street`,`building_number`,`apartment_number`,`phone`)
+INSERT INTO Customer (`first_name`,`last_name`,`city`,`street`,`building_number`,`apartment_number`,`customer_phone`)
 VALUES
   ("hussein","abdallah","madinaty","sheikh ali mahmoud",118,51,"+20 104 386 4767"),
   ("hajar","hussein","fifth settlement","shams el din",62,3,"+20 108 388 1772"),
@@ -103,7 +103,7 @@ VALUES
   ("walid","nour","rehab","hegaz",93,46,"+20 108 765 2130"),
   ("merna","gamal","nasr city","abdelhameed badawi",189,107,"+20 113 865 2812"),
   ("nour","mohsen","nasr city","hegaz",96,117,"+20 102 886 3371");
-INSERT INTO Customer (`first_name`,`last_name`,`city`,`street`,`building_number`,`apartment_number`,`phone`)
+INSERT INTO Customer (`first_name`,`last_name`,`city`,`street`,`building_number`,`apartment_number`,`customer_phone`)
 VALUES
   ("omar","nour","rehab","ammar ibn yasser",223,70,"+20 128 553 6815"),
   ("gamal","ibrahim","nasr city","shams el din",251,67,"+20 122 268 1884"),
@@ -217,12 +217,12 @@ VALUES
 
 INSERT INTO Manager(`employee_ssn`,`sector`,`branch_name`)
 VALUES
-  ("771535616","marketing","abdo basha"),
-  ("586711748","HR","nasr city"),
-  ("761664112","quality control","abdo basha"),
-  ("683963463","financial management","city stars"),
-  ("338705751","customer service","abbasseya"),
-  ("267181346","operation management","abdo basha")
+  ("771535616","marketing","Abdo basha"),
+  ("586711748","HR","Nasr city"),
+  ("761664112","quality control","Abdo basha"),
+  ("683963463","financial management","City stars"),
+  ("338705751","customer service","Abbasseya"),
+  ("267181346","operation management","Abdo basha")
   ;
 
 -- Menu_Item
