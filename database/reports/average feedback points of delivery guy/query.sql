@@ -1,4 +1,4 @@
 SELECT
-    AVG(feedback)
+    AVG(feedback) AS AVG_feedback_points
 FROM
-    delivery_feedbacks_received
+    Delivery_feedbacks_received
