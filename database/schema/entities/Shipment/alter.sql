@@ -1,5 +1,6 @@
 ALTER TABLE Shipment
-	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES Branch(branch_name)
+	-- ADD COLUMN branch_name VARCHAR(20),
+	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES branch(branch_name)
     ON UPDATE CASCADE
     ON DELETE RESTRICT
 ;

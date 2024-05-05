@@ -1,0 +1,11 @@
+ALTER TABLE Sells
+	ADD CONSTRAINT FOREIGN KEY (ingredient_name) REFERENCES Ingredient(ingredient_name)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+;
+
+ALTER TABLE Sells
+	ADD CONSTRAINT FOREIGN KEY (supplier_name) REFERENCES Supplier(supplier_name)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+;
