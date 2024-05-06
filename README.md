@@ -28,8 +28,33 @@ The database includes the following features:
 - Tracking the employees, their salaries, roles, the branches they work in, and additional data depending on their role. They can be chefs, drivers, cashiers, or managers.
     - The chefs can prepare the menu items, the drivers can deliver the orders, the cashiers can process the transactions, and the managers can manage the branches.
 
+### The Reports include:
 
+For Customers:
+- Branch addresses and phone numbers.
+- Empty tables in each branch.
+- History of orders for the customer.
+- Menu items prices after applying the offers.
+- Menu items available in a certain branch.
 
+For Chefs:
+- All ingredients and tools needed to prepare the items of a certain order.
+
+For Salespersons:
+- Most ordered items.
+- Items frequently ordered together.
+
+For Branch Managers:
+- Average feedback points of each delivery driver.
+- Which tools are the most used in each branch.
+- Tables with most reservations in each branch.
+
+For the Franchise Owner:
+- Revenue of each branch.
+- Employees of all branches.
+- All the ingredients bought by the branches in a certain period.
+- The total profit of the franchise in a certain period.
+- Suppliers who provided the ingredients for a certain branch.
 
 
 ## Statistics of the project
