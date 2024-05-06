@@ -8,6 +8,29 @@ The project includes the following:
 - The SQL implementation of the database, including the tables, the relationships, the constraints, the inserts, the queries, and the views.
 - The SQL implementation of 18 reports that can be run on the database.
 
+## Features
+
+The database includes the following features:
+
+- Tracking the shipments for each branch, including the date, the supplier, the ingredients in the shipment, its quantity and price.
+- Tracking which ingredients are used in each dish, the quantity of each ingredient used in each dish, and the stock of each ingredient in each branch and which suppliers provide each ingredient.
+- Tracking which menu items are served in each branch, the price of each item, the tools needed to prepare each item, and the ingredients needed to prepare each item.
+- Tracking the tools available and their quantity in each branch, the tools needed to prepare each menu item, and which chefs are qualified to use each tool.
+- Tracking the branches, the employees working in each branch, the tables in each branch, the reservations for tables, the orders for each table, the menu items ordered in each order, and the chefs who prepared each order.
+- Tracking the orders for each branch:
+    - Delivery: The delivery orders, the driver who delivered each order, the delivery time, and the delivery address.
+    - Reservations: The reservations for each branch, the tables reserved, the reservation time, and the customer who made the reservation and the number of guests.
+    - Transactions: The transactions for each order, the payment method, the total amount, and the cashier who processed the transaction.
+- Creating offers with various types:
+    - General for all branches or specific to some branches.
+    - Discount on all items or specific items.
+- Tracking the customers, their orders, their reservations, and their feedback.
+- Tracking the employees, their salaries, roles, the branches they work in, and additional data depending on their role. They can be chefs, drivers, cashiers, or managers.
+    - The chefs can prepare the menu items, the drivers can deliver the orders, the cashiers can process the transactions, and the managers can manage the branches.
+
+
+
+
 
 ## Statistics of the project
 
