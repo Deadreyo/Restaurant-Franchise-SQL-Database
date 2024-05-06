@@ -77,7 +77,8 @@ ALTER TABLE
 -- Shipment
 
 ALTER TABLE Shipment
-	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES Branch(branch_name)
+	-- ADD COLUMN branch_name VARCHAR(20),
+	ADD CONSTRAINT FOREIGN KEY (branch_name) REFERENCES branch(branch_name)
     ON UPDATE CASCADE
     ON DELETE RESTRICT
 ;
@@ -228,6 +229,20 @@ ALTER TABLE
 ALTER TABLE
     Reserved ADD CONSTRAINT FOREIGN KEY(order_id) REFERENCES Orders(order_id) ON UPDATE CASCADE ON DELETE CASCADE;
 
+
+-- Sells
+
+ALTER TABLE Sells
+	ADD CONSTRAINT FOREIGN KEY (ingredient_name) REFERENCES Ingredient(ingredient_name)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+;
+
+ALTER TABLE Sells
+	ADD CONSTRAINT FOREIGN KEY (supplier_name) REFERENCES Supplier(supplier_name)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+;
 
 -- Stores
 
